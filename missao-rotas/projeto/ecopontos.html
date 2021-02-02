@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Ecopontos</title>
+</head>
+
+<body onload="carregaEcoponto()">
+    <h2>Ecopontos</h2>
+    <div class="table1">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="6">Gerenciar Veiculo</th>
+                </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Cooperativas_id</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Lat</th>
+                    <th>Longi</th>
+                </tr>
+            </thead>
+            <tbody id="corpoecoponto">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Auto</td>
+                    <td><input type="number" placeholder="Cooperativas_id" id="cooperativas_id"></td>
+                    <td><input type="text" placeholder="Nome" id="nome"></td>
+                    <td><input type="text" placeholder="Descrição" id="descricao"></td>
+                    <td><input type="text" placeholder="Lat" id="lat"></td>
+                    <td><input type="text" placeholder="Longi" id="longi"></td>
+                    <td><input type="button" value="Adicionar" onclick="addEcoponto()"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="msg">
+        <p id="mensagem">Mensagens do Sistema</p>
+    </div>
+    </div>
+    <script src="ecopontos.js"></script>
+</body>
+
+</html>
