@@ -30,14 +30,15 @@ function readall(){
 
 function addponto(){
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
-    const id_v = document.getElementById("id_v")
-    const nome = document.getElementById("name")
-    const dat = document.getElementById("dta_time")
+    let id_v = document.getElementById("id_v")
+    let nome = document.getElementById("name")
+    let dat = document.getElementById("dta_time")
     if(id_v.value != "" && nome.value != "" && dat.value != ""){
         let dados = new FormData()
-        dados.append("id_v",id_v.value)
+        dados.append("veiculos_id",id_v.value)
         dados.append("nome",nome.value)
         dados.append("dia_horario",dat.value)
+        dados.append("verbo", "POST")
         xhr.addEventListener("readystatechange", function (){
             if (this.readyState === this.DONE) {
                 let resp = JSON.parse(this.responseText);

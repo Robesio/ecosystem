@@ -18,21 +18,24 @@
           </tr>
         </thead>
         <tbody id="bp"></tbody>
+        <tfoot>
+          <tr>
+            <th><strong> Informe as informaçoes abaixo</strong></th>
+          </tr>
+          <tr>
+            <td>
+              <input type="number" id="id_v" placeholder="id do veiculo" />
+            </td>
+            <td><input type="text" id="name" placeholder="Nome" /></td>
+            <td>
+              <input type="datetime" id="dta_time" placeholder="data hora" />
+            </td>
+            <td>
+              <input type="button" value="ADD" id="btn" onclick="addponto()" />
+            </td>
+          </tr>
+        </tfoot>
       </table>
-      <tfoot>
-        <tr>
-          <th><strong> Informe as informaçoes abaixo</strong></th>
-          <br />
-        </tr>
-        <tr>
-          <td><input type="number" id="id_v" placeholder="id do veiculo" /></td>
-          <td><input type="text" id="name" placeholder="Nome" /></td>
-          <td>
-            <input type="datetime" id="dta_time" placeholder="data hora" />
-          </td>
-          <input type="button" value="ADD" id="btn" onclick="readall()" />
-        </tr>
-      </tfoot>
     </div>
     <div class="msg">
       <p id="mensagem">Mensagens do Sistema</p>
