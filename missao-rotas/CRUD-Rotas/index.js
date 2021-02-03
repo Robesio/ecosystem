@@ -18,7 +18,7 @@ function readall(){
                 r.innerHTML = `<td>${val.veiculos_id} </td>`
                 r.innerHTML += `<td>${val.nome} </td>`
                 r.innerHTML += `<td>${val.dia_horario} </td>`
-                r.innerHTML += `<td style="padding:3px"><button onclick='editEcoponto(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delEcoponto(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`
+                r.innerHTML += `<td style="padding:3px"><button onclick='editponto(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delponto(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`
 
                 bp.appendChild(r)
             })
@@ -58,9 +58,29 @@ function addponto(){
         setTimeout(() => { msg.innerHTML = "Mensagens do sistema"; }, 3000);
     }
 }
-function editEcoponto(v) {
+function editponto(v) {
     v.parentNode.parentNode.cells[0].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[3].innerHTML = "<button onclick='putVeiculo(this)'>Enviar</button>";
+}
+function delponto(v) {
+    let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
+    let id = v.parentNode.parentNode.cells[0].innerText
+    let dados = "id=" + id
+    if (window.confirm("Confirma Exclusão do id = " + id + "?")) {
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === this.DONE) {
+                let resp = JSON.parse(this.responseText);
+                if (resp.hasOwnProperty("erro")) {
+                    msg.innerHTML = resp.erro
+                } else {
+                    msg.innerHTML = "Ponto excluido Com Sucesso."
+                }
+                setTimeout(() => { window.location.reload(); }, 3000)
+            }
+        });
+        xhr.open("DELETE", url)
+        xhr.send(dados)
+    }
 }
