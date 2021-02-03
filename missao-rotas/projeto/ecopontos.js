@@ -68,7 +68,8 @@ function editEcoponto(v) {
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[4].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[5].innerHTML = "<button onclick='putVeiculo(this)'>Enviar</button>";
+    v.parentNode.parentNode.cells[5].setAttribute("contentEditable", "true");
+    v.parentNode.parentNode.cells[6].innerHTML = "<button onclick='putVeiculo(this)'>Enviar</button>";
 }
 
 function delEcoponto(v) {
