@@ -42,6 +42,7 @@ function addEcoponto() {
         dados.append("descricao", descricao.value);
         dados.append("lat", lat.value);
         dados.append("longi", longi.value);
+        dados.append("verbo", "POST");
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
                 let resp = JSON.parse(this.responseText);
@@ -72,9 +73,9 @@ function editEcoponto(v) {
     v.parentNode.parentNode.cells[6].innerHTML = "<button onclick='putVeiculo(this)'>Enviar</button>";
 }
 
-function delEcoponto(v) {
+function delEcoponto(e) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.ecopontos.php";
-    let id = v.parentNode.parentNode.cells[0].innerText;
+    let id = e.parentNode.parentNode.cells[0].innerText;
     let dados = "id=" + id;
     if (window.confirm("Confirma Exclusão do id = " + id + "?")) {
         xhr.addEventListener("readystatechange", function () {
@@ -83,7 +84,7 @@ function delEcoponto(v) {
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
-                    msg.innerHTML = "Veiculo Excluída Com Sucesso.";
+                    msg.innerHTML = "Ecoponto Excluída Com Sucesso.";
                 }
                 setTimeout(() => { window.location.reload(); }, 3000);
             }
