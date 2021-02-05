@@ -63,20 +63,53 @@ function addEcoponto() {
     }
 }
 
-
 function editEcoponto(v) {
     v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[4].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[5].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[6].innerHTML = "<button onclick='putVeiculo(this)'>Enviar</button>";
+    v.parentNode.parentNode.cells[6].innerHTML = "<button onclick='putEcoponto(this)'>Enviar</button>";
+}
+
+function putEcoponto(e) {
+    let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.ecopontos.php";
+    let id = e.parentNode.parentNode.cells[0].innerHTML;
+    let cooperativas_id = e.parentNode.parentNode.cells[1].innerHTML;
+    let nome = e.parentNode.parentNode.cells[2].innerHTML;
+    let descricao = e.parentNode.parentNode.cells[3].innerHTML;
+    let lat = e.parentNode.parentNode.cells[4].innerHTML;
+    let longi = e.parentNode.parentNode.cells[5].innerHTML;
+    let dados = "id=" + id;
+    dados += "&cooperativas_id=" + cooperativas_id;
+    dados += "&nome=" + nome;
+    dados += "&descricao=" + descricao;
+    dados += "&lat=" + lat;
+    dados += "&longi=" + longi;
+    dados += "&verbo=", "PUT";
+    if (window.confirm("Confirma Alteração dos dados?")) {
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === this.DONE) {
+                let resp = JSON.parse(this.responseText);
+                if (resp.hasOwnProperty("erro")) {
+                    msg.innerHTML = resp.erro;
+                } else {
+                    msg.innerHTML = "Dados do Ecoponto Alterada Com Sucesso.";
+                }
+                setTimeout(() => { window.location.reload(); }, 3000);
+            }
+        });
+        xhr.open("POST", url);
+        xhr.send(dados);
+    }
 }
 
 function delEcoponto(e) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.ecopontos.php";
     let id = e.parentNode.parentNode.cells[0].innerText;
-    let dados = "id=" + id;
+    let dados = new FormData();
+    dados.append("id", id);
+    dados.append("verbo", "DELETE");
     if (window.confirm("Confirma Exclusão do id = " + id + "?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
@@ -84,12 +117,12 @@ function delEcoponto(e) {
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
-                    msg.innerHTML = "Ecoponto Excluída Com Sucesso.";
+                    msg.innerHTML = "Ecoponto Deletar Com Sucesso!";
                 }
                 setTimeout(() => { window.location.reload(); }, 3000);
             }
         });
-        xhr.open("DELETE", url);
+        xhr.open("POST", url);
         xhr.send(dados);
     }
 }
