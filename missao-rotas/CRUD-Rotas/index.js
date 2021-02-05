@@ -62,15 +62,18 @@ function editponto(v) {
     v.parentNode.parentNode.cells[0].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[3].innerHTML = "<button onclick='putVeiculo(this)'>Enviar</button>";
+    v.parentNode.parentNode.cells[3].innerHTML = "<button onclick='addponto(this)'>Enviar</button>";
 }
 function delponto(v) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
     let id = v.parentNode.parentNode.cells[0].innerText
-    let dados = "id=" + id
+    let dados = new FormData();
+    dados.append("id", id);
+    dados.append("verbo", "DELETE");
     if (window.confirm("Confirma Exclusão do id = " + id + "?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
+                console.log(this.responseText)
                 let resp = JSON.parse(this.responseText);
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro
@@ -80,7 +83,7 @@ function delponto(v) {
                 setTimeout(() => { window.location.reload(); }, 3000)
             }
         });
-        xhr.open("DELETE", url)
+        xhr.open("POST", url)
         xhr.send(dados)
     }
 }
