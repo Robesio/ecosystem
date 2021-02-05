@@ -8,3 +8,8 @@ Exe: No manual-API-ecosystem tem um exemplo de diagrama de caso de uso.
 
 Obs: Data de entraga 19/02/21, entregar o quanto antes para o grupo 
 integrador juntar as documentação em uma só.
+
+Representantes dos grupos:
+Chamados	---> Paulo
+Frotas		---> Lucas
+Rotas		---> Murilo
