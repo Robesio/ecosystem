@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Listar</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body onload="carregaMateriais()">
+  <div class="table1"><br>
+    <h2>Adicionar Materiais</h2>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="6">Gerenciar Veiculo</th>
+        </tr>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Cor</th>
+        </tr>
+      </thead>
+      <tbody id="corpomateriais"></tbody>
+      <tfoot>
+        <tr>
+          <td>
+            <input type="number" placeholder="Cooperativas_id" id="id" />
+          </td>
+          <td><input type="text" placeholder="Nome" id="nome" /></td>
+          <td>
+            <input type="text" placeholder="Cor" id="cor" />
+          </td>
+          <td>
+            <input type="button" value="Adicionar" onclick="add()" />
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <div class="msg">
+      <p id="mensagem">Mensagens do Sistema</p>
+    </div>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
