@@ -5,7 +5,7 @@ const bp = document.getElementById("bp")
 
 var URLbase = "https://projetorrw.000webhostapp.com/src/controll/routes/"
 
-function readall(){
+function readall() {
     fetch(URLbase + "route.rotas.php?id=0")
         .then(function (resp) {
             if (!resp.ok)
@@ -28,18 +28,18 @@ function readall(){
         })
 }
 
-function addponto(){
+function addponto() {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
-    let id_v = document.getElementById("id_v")
+    let id = document.getElementById("id")
     let nome = document.getElementById("name")
     let dat = document.getElementById("dta_time")
-    if(id_v.value != "" && nome.value != "" && dat.value != ""){
+    if (id.value != "" && nome.value != "" && dat.value != "") {
         let dados = new FormData()
-        dados.append("veiculos_id",id_v.value)
-        dados.append("nome",nome.value)
-        dados.append("dia_horario",dat.value)
+        dados.append("veiculos_id", id.value)
+        dados.append("nome", nome.value)
+        dados.append("dia_horario", dat.value)
         dados.append("verbo", "POST")
-        xhr.addEventListener("readystatechange", function (){
+        xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
                 let resp = JSON.parse(this.responseText);
                 msg.innerHTML = this.responseText;
@@ -73,7 +73,7 @@ function delponto(v) {
     if (window.confirm("Confirma Exclusão do id = " + id + "?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
-                console.log(this.responseText)
+                //console.log(this.responseText)
                 let resp = JSON.parse(this.responseText);
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro
