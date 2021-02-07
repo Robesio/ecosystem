@@ -4,21 +4,22 @@
 <head>
   <title>Listar</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 
 <body onload="carregaMateriais()">
-  <div class="table1"><br>
-    <h2>Adicionar Materiais</h2>
+  <h2>Adicionar Materiais</h2>
+  <div class="table1">
     <table>
       <thead>
         <tr>
-          <th colspan="6">Gerenciar Veiculo</th>
+          <th colspan="4">Gerenciar Materiais</th>
         </tr>
         <tr>
           <th>Id</th>
           <th>Nome</th>
           <th>Cor</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody id="corpomateriais"></tbody>
@@ -37,10 +38,11 @@
         </tr>
       </tfoot>
     </table>
-    <div class="msg">
-      <p id="mensagem">Mensagens do Sistema</p>
-    </div>
-    <script src="js/js.js"></script>
+  </div>
+  <div class="msg">
+    <p id="mensagem">Mensagens do Sistema</p>
+  </div>
+  <script src="js/js.js"></script>
 </body>
 
 </html>

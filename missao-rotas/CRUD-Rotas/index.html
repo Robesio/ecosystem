@@ -4,36 +4,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <title>Rotas</title>
 </head>
 
 <body onload="readall()">
   <h2>Rotas</h2>
-  <div>
+  <div class="table1">
     <table>
       <thead>
+        <tr>
+          <th colspan="4">Gerenciar Rotas</th>
+        </tr>
         <tr>
           <th>ID do veiculo</th>
           <th>Nome</th>
           <th>Data e horario</th>
+          <th>Ações</th>
         </tr>
       </thead>
-      <tbody id="bp"></tbody>
+      <tbody id="bp">
+      </tbody>
       <tfoot>
-        <tr>
-          <th><strong> Informe as informaçoes abaixo</strong></th>
-        </tr>
         <tr>
           <td>
             <input type="number" id="id_v" placeholder="id do veiculo" />
           </td>
           <td><input type="text" id="name" placeholder="Nome" /></td>
           <td>
-            <input type="datetime" id="dta_time" placeholder="data hora" />
+            <input type="text" id="dta_time" placeholder="data hora" />
           </td>
           <td>
-            <input type="button" value="ADD" id="btn" onclick="addponto()" />
+            <input type="button" value="Adicionar" id="btn" onclick="addponto()" />
           </td>
         </tr>
       </tfoot>
