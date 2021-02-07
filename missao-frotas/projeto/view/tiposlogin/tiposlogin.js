@@ -27,7 +27,7 @@ function readall() {
         })
 }
 
-function addtipologin() {
+function addtipo() {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.tipos_login.php"
     let id = document.getElementById("id")
     let tipo = document.getElementById("tipo")
