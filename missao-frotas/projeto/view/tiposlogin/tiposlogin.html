@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Frotas</title>
+</head>
+
+<body onload="readall()">
+  <h2>Frotas</h2>
+  <div class="table1">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">Gerenciar Frotas</th>
+        </tr>
+        <tr>
+          <th>ID do Tipo de Login</th>
+          <th>Tipo de Login</th>
+        </tr>
+      </thead>
+      <tbody id="bp">
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>
+            <input type="number" id="id_t" placeholder="id do Tipo de Login" />
+          </td>
+          <td><input type="text" id="tipo" placeholder="Tipo de Login" /></td>
+          <td>
+            <input type="button" value="Adicionar" id="btn" onclick="addtipologin()" />
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="msg">
+    <p id="mensagem">Mensagens do Sistema</p>
+  </div>
+  <script src="tiposlogin.js"></script>
+</body>
+
+</html>
