@@ -1,0 +1,98 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+/*@media only screen and (max-device-width: 900px) {
+.menu { width:100%; }
+}*/
+h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  color: rgb(6, 196, 243);
+}
+div {
+  text-align: center;
+}
+.msg {
+  border-radius: 7px;
+  margin: 0 30%;
+  width: 540px;
+  text-align: center;
+  font-size: 1.8em;
+  font-family: Arial, sans-serif;
+  color: rgb(6, 196, 243);
+  background: #00bf8f;
+  background: -webkit-linear-gradient(to right, #001510, #00bf8f);
+  background: linear-gradient(to right, #001510, #00bf8f);
+}
+.table1 {
+  margin: 1% 0 0 29%;
+  width: 800px;
+  font-size: 1.6em;
+  border-radius: 7px;
+}
+th {
+  font-family: Arial, sans-serif;
+  color: rgb(6, 196, 243);
+  background: #00bf8f;
+  background: -webkit-linear-gradient(to right, #001510, #00bf8f);
+  background: linear-gradient(to right, #001510, #00bf8f);
+  font-size: 1em;
+  padding: 11px;
+  border-radius: 7px;
+}
+td {
+  font-size: 0.8em;
+  border-radius: 7px;
+  padding: 13px 5px;
+  color: rgb(7, 108, 126);
+  background: #8e9eab;
+  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
+td input[type="text"] {
+  width: 120px;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 0.7em;
+  outline: none;
+  background: none;
+  color: rgb(7, 108, 126);
+}
+td input[type="number"] {
+  width: 100px;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 0.7em;
+  outline: none;
+  background: none;
+  color: rgb(7, 108, 126);
+}
+td input[type="button"] {
+  width: 120px;
+  padding: 5px;
+  font-size: 1em;
+  border-radius: 4px;
+  color: white;
+  background: #00bf8f;
+  background: -webkit-linear-gradient(to right, #001510, #00bf8f);
+  background: linear-gradient(to right, #001510, #00bf8f);
+  font-family: Helvetica, sans-serif;
+  text-shadow: rgb(0, 0, 0) 8px 3px 8px;
+}
+::placeholder {
+  font-size: 1em;
+  color: rgb(7, 108, 126);
+}
+button {
+  font-size: 1em;
+  border-radius: 8px;
+  color: white;
+  background: #00bf8f;
+  background: -webkit-linear-gradient(to right, #001510, #00bf8f);
+  background: linear-gradient(to right, #001510, #00bf8f);
+  font-family: OCR A Std, monospace;
+  text-shadow: rgb(0, 0, 0) 8px 3px 8px;
+  padding: 4px 23px;
+}
