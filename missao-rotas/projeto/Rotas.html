@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="style_Rotas.css" />
   <title>Rotas</title>
 </head>
 
@@ -17,6 +17,7 @@
           <th colspan="4">Gerenciar Rotas</th>
         </tr>
         <tr>
+          <th>ID</th>
           <th>ID do veiculo</th>
           <th>Nome</th>
           <th>Data e horario</th>
@@ -27,6 +28,7 @@
       </tbody>
       <tfoot>
         <tr>
+          <td>Auto</td>
           <td>
             <input type="number" id="id_v" placeholder="id do veiculo" />
           </td>
@@ -35,7 +37,7 @@
             <input type="text" id="dta_time" placeholder="data hora" />
           </td>
           <td>
-            <input type="button" value="Adicionar" id="btn" onclick="addponto()" />
+            <input type="button" value="Adicionar" id="btn" onclick="addRota()" />
           </td>
         </tr>
       </tfoot>
@@ -44,7 +46,7 @@
   <div class="msg">
     <p id="mensagem">Mensagens do Sistema</p>
   </div>
-  <script src="index.js"></script>
+  <script src="Rotas.js"></script>
 </body>
 
 </html>
