@@ -15,7 +15,8 @@ function readall() {
         .then(function (data) {
             data.forEach((val) => {
                 let r = document.createElement("tr")
-                r.innerHTML = `<td>${val.veiculos_id} </td>`
+                r.innerHTML = `<tr><td>${val.id} </td>`
+                r.innerHTML += `<td>${val.veiculos_id} </td>`
                 r.innerHTML += `<td>${val.nome} </td>`
                 r.innerHTML += `<td>${val.dia_horario} </td>`
                 r.innerHTML += `<td style="padding:3px"><button onclick='editrota(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delrota(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`
@@ -59,16 +60,17 @@ function addRota() {
     }
 }
 function editrota(v) {
-    v.parentNode.parentNode.cells[0].setAttribute("contentEditable", "true");
+    v.parentNode.parentNode.cells[0].setAttribute("contentEditable", "false");
     v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[3].innerHTML = "<button onclick='putRota(this)'>Enviar</button>";
+    v.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
+    v.parentNode.parentNode.cells[4].innerHTML = "<button onclick='putRota(this)'>Enviar</button>";
 }
 function putRota(v) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
-    let id_v = v.parentNode.parentNode.cells[0].innerHTML
-    let nome = v.parentNode.parentNode.cells[1].innerHTML
-    let dat = v.parentNode.parentNode.cells[2].innerHTML
+    let id_v = v.parentNode.parentNode.cells[1].innerHTML
+    let nome = v.parentNode.parentNode.cells[2].innerHTML
+    let dat = v.parentNode.parentNode.cells[3].innerHTML
     let dados = "&veiculos_id=" + id_v
     dados += "&nome=" + nome
     dados += "&dia_horario=" + dat
