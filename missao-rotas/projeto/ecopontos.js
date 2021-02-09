@@ -3,7 +3,6 @@ const xhr = new XMLHttpRequest();
 const tableEcopontos = document.querySelector("#corpoecoponto");
 const urlEcoponto = "https://projetorrw.000webhostapp.com/src/controll/routes/";
 
-//comentario
 function carregaEcoponto() {
     fetch(urlEcoponto + "route.ecopontos.php?id=0")
         .then(function (resp) {

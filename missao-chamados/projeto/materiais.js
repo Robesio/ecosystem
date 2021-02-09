@@ -16,7 +16,7 @@ function carregaMateriais() {
                 r.innerHTML = `<td>${val.id} </td>`;
                 r.innerHTML += `<td>${val.nome} </td>`;
                 r.innerHTML += `<td>${val.cor} </td>`;
-                r.innerHTML += `<td style="padding:3px"><button onclick='editponto(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delponto(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`;
+                r.innerHTML += `<td style="padding:3px"><button onclick='edi(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='del(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`;
                 tableMateriais.appendChild(r);
             })
         })
@@ -55,30 +55,58 @@ function add() {
         setTimeout(() => { msg.innerHTML = "Mensagens do sistema"; }, 3000);
     }
 }
-function editponto(v) {
+function edi(v) {
     v.parentNode.parentNode.cells[0].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[3].innerHTML = "<button onclick='putMateriais(this)'>Enviar</button>";
-} URLbase
-
-function delponto(v) {
+}
+function putMateriais(e) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.materiais.php"
-    let id = v.parentNode.parentNode.cells[0].innerText
-    let dados = "id=" + id
+    let id = e.parentNode.parentNode.cells[0].innerHTML;
+    let nome = e.parentNode.parentNode.cells[1].innerHTML;
+    let cor = e.parentNode.parentNode.cells[2].innerHTML;
+
+    let dados = "&id=" + id;
+    dados += "&nome=" + nome;
+    dados += "&cor=" + cor;
+    dados += "&verbo=", "PUT";
+    if (window.confirm("Confirma Alteração dos dados?")) {
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === this.DONE) {
+                let resp = JSON.parse(this.responseText);
+                if (resp.hasOwnProperty("erro")) {
+                    msg.innerHTML = resp.erro;
+                } else {
+                    msg.innerHTML = "Dados do Ecoponto Alterada Com Sucesso.";
+                }
+                setTimeout(() => { window.location.reload(); }, 3000);
+            }
+        });
+        xhr.open("POST", url);
+        xhr.send(dados);
+    }
+}
+
+function del(e) {
+    let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.materiais.php"
+    let id = e.parentNode.parentNode.cells[0].innerText;
+    let dados = new FormData();
+    dados.append("id", id);
+    dados.append("verbo", "DELETE");
     if (window.confirm("Confirma Exclusão do id = " + id + "?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
                 let resp = JSON.parse(this.responseText);
                 if (resp.hasOwnProperty("erro")) {
-                    msg.innerHTML = resp.erro
+                    msg.innerHTML = resp.erro;
                 } else {
-                    msg.innerHTML = " excluido Com Sucesso."
+                    msg.innerHTML = "Materiais Deletar Com Sucesso!";
                 }
-                setTimeout(() => { window.location.reload(); }, 3000)
+                setTimeout(() => { window.location.reload(); }, 3000);
             }
         });
-        xhr.open("DELETE", url)
-        xhr.send(dados)
+        xhr.open("POST", url);
+        xhr.send(dados);
     }
 }
