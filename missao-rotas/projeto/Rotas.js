@@ -18,7 +18,7 @@ function readall() {
                 r.innerHTML = `<td>${val.veiculos_id} </td>`
                 r.innerHTML += `<td>${val.nome} </td>`
                 r.innerHTML += `<td>${val.dia_horario} </td>`
-                r.innerHTML += `<td style="padding:3px"><button onclick='editponto(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delponto(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`
+                r.innerHTML += `<td style="padding:3px"><button onclick='editrota(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delrota(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`
 
                 bp.appendChild(r)
             })
@@ -28,7 +28,7 @@ function readall() {
         })
 }
 
-function addponto() {
+function addRota() {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
     let id = document.getElementById("id")
     let nome = document.getElementById("name")
@@ -58,13 +58,13 @@ function addponto() {
         setTimeout(() => { msg.innerHTML = "Mensagens do sistema"; }, 3000);
     }
 }
-function editponto(v) {
+function editrota(v) {
     v.parentNode.parentNode.cells[0].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[3].innerHTML = "<button onclick='addponto(this)'>Enviar</button>";
 }
-function delponto(v) {
+function delrota(v) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
     let id = v.parentNode.parentNode.cells[0].innerText
     let dados = new FormData();
