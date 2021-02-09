@@ -61,6 +61,7 @@ function editponto(v) {
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[3].innerHTML = "<button onclick='putMateriais(this)'>Enviar</button>";
 } URLbase
+
 function delponto(v) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.materiais.php"
     let id = v.parentNode.parentNode.cells[0].innerText
