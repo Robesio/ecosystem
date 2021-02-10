@@ -74,15 +74,15 @@ function editEcoponto(v) {
 
 function putEcoponto(e) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.ecopontos.php";
-    //let id = e.parentNode.parentNode.cells[0].innerHTML;
-    //let cooperativas_id = e.parentNode.parentNode.cells[0].innerHTML;
-    let nome = e.parentNode.parentNode.cells[0].innerHTML;
-    let descricao = e.parentNode.parentNode.cells[1].innerHTML;
-    let lat = e.parentNode.parentNode.cells[2].innerHTML;
-    let longi = e.parentNode.parentNode.cells[3].innerHTML;
-    //let dados = "id=" + id;
-    //dados += "&cooperativas_id=" + cooperativas_id;
-    let dados = "&nome=" + nome;
+    let id = e.parentNode.parentNode.cells[0].innerHTML;
+    let cooperativas_id = e.parentNode.parentNode.cells[1].innerHTML;
+    let nome = e.parentNode.parentNode.cells[2].innerHTML;
+    let descricao = e.parentNode.parentNode.cells[3].innerHTML;
+    let lat = e.parentNode.parentNode.cells[4].innerHTML;
+    let longi = e.parentNode.parentNode.cells[5].innerHTML;
+    let dados = "&id=" + id;
+    dados += "&cooperativas_id=" + cooperativas_id;
+    dados += "&nome=" + nome;
     dados += "&descricao=" + descricao;
     dados += "&lat=" + lat;
     dados += "&longi=" + longi;
