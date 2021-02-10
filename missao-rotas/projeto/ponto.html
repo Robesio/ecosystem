@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Ponto</title>
+</head>
+
+<body onload="readall()">
+  <h2>Pontos de Coletas</h2>
+  <div class="table1">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">Pontos de Coletas</th>
+        </tr>
+        <tr>
+          <th>ID do veiculo</th>
+          <th>Longitude</th>
+          <th>Latitude</th>
+          <th>ADD</th>
+        </tr>
+      </thead>
+      <tbody id="bp">
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>
+            <input type="number" id="id_v" placeholder="id do veiculo" />
+          </td>
+          <td><input type="text" id="name" placeholder="Longitude" /></td>
+          <td>
+            <input type="text" id="dta_time" placeholder="Latitude" />
+          </td>
+          <td>
+            <input type="button" value="Adicionar" id="btn" onclick="addponto()" />
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="msg">
+    <p id="mensagem">Mensagens do Sistema</p>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
