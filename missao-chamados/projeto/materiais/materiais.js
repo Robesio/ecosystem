@@ -31,6 +31,7 @@ function add() {
     let nome = document.getElementById("nome")
     let cor = document.getElementById("cor")
     if (id.value != "" && nome.value != "" && cor.value != "") {
+
         let dados = new FormData()
         dados.append("id", id.value)
         dados.append("nome", nome.value)
@@ -56,7 +57,6 @@ function add() {
     }
 }
 function edi(v) {
-    v.parentNode.parentNode.cells[0].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[3].innerHTML = "<button onclick='putMateriais(this)'>Enviar</button>";
@@ -67,10 +67,12 @@ function putMateriais(e) {
     let nome = e.parentNode.parentNode.cells[1].innerHTML;
     let cor = e.parentNode.parentNode.cells[2].innerHTML;
 
-    let dados = "&id=" + id;
-    dados += "&nome=" + nome;
-    dados += "&cor=" + cor;
-    dados += "&verbo=", "PUT";
+    let dados = new FormData();
+    dados.append("id", id)
+    dados.append("nome", nome);
+    dados.append("cor", cor);
+    dados.append("verbo", "PUT");
+
     if (window.confirm("Confirma Alteração dos dados?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
@@ -101,7 +103,7 @@ function del(e) {
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
-                    msg.innerHTML = "Materiais Deletar Com Sucesso!";
+                    msg.innerHTML = "Ecoponto Deletar Com Sucesso!";
                 }
                 setTimeout(() => { window.location.reload(); }, 3000);
             }

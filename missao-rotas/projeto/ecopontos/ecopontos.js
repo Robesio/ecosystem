@@ -64,7 +64,6 @@ function addEcoponto() {
 }
 
 function editEcoponto(v) {
-    v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[4].setAttribute("contentEditable", "true");
@@ -80,13 +79,15 @@ function putEcoponto(e) {
     let descricao = e.parentNode.parentNode.cells[3].innerHTML;
     let lat = e.parentNode.parentNode.cells[4].innerHTML;
     let longi = e.parentNode.parentNode.cells[5].innerHTML;
-    let dados = "&id=" + id;
-    dados += "&cooperativas_id=" + cooperativas_id;
-    dados += "&nome=" + nome;
-    dados += "&descricao=" + descricao;
-    dados += "&lat=" + lat;
-    dados += "&longi=" + longi;
-    dados += "&verbo=", "PUT";
+
+    let dados = new FormData();
+    dados.append("id", id)
+    dados.append("cooperativas_id", cooperativas_id);
+    dados.append("nome", nome);
+    dados.append("descricao", descricao)
+    dados.append("lat", lat);
+    dados.append("longi", longi);
+    dados.append("verbo", "PUT");
     if (window.confirm("Confirma Alteração dos dados?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
