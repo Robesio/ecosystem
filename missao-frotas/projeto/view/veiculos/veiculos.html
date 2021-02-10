@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="./veiculo.css" />
+  <title>Frotas</title>
+</head>
+
+<body onload="readall()">
+  <h2>Veículos</h2>
+  <div class="table1">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">Gerenciar Veículos</th>
+        </tr>
+        <tr>
+          <th>ID do Veículos</th>
+          <th>ID da Cooperativa</th>
+          <th>Placa</th>
+          <th>Modelo</th>
+          <th>Marca</th>
+          <th>Capacidade de Carga</th>
+  
+        </tr>
+      </thead>
+      <tbody id="bp">
+      </tbody>
+      <tfoot>
+        <tr>
+        <td>
+            <input type="number" id="id" placeholder="id do Veículo" />
+        </td>
+        <td>
+            <input type="number" id="idcooperativa" placeholder="id da Cooperativa" />
+        </td>
+        <td>
+            <input type="text" id="placa" placeholder="Placa do Veículo" />
+        </td>
+        <td>
+            <input type="text" id="modelo" placeholder="Modelo do Veículo" />
+        </td>
+        <td>
+            <input type="text" id="marca" placeholder="Placa do Veículo" />
+        </td>
+        <td>
+            <input type="text" id="capacidade_carga_gk" placeholder="Capacidade de Carga - Kg" />
+        </td>
+        <td>  
+            <input type="button" value="Adicionar" id="btn" onclick="addveiculo()" />
+        </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="msg">
+    <p id="mensagem">Mensagens do Sistema</p>
+  </div>
+  <script src="veiculos.js"></script>
+</body>
+
+</html>

@@ -6,7 +6,7 @@ const bp = document.getElementById("bp")
 var URLbase = "https://projetorrw.000webhostapp.com/src/controll/routes/"
 
 function readall() {
-    fetch(URLbase + "route.rotas.php?id=0")
+    fetch(URLbase + "route.pontos.php?id=0")
         .then(function (resp) {
             if (!resp.ok)
                 throw new Error("Erro ao executar requisição: " + resp.status)
@@ -16,11 +16,10 @@ function readall() {
             data.forEach((val) => {
                 let r = document.createElement("tr")
                 r.innerHTML = `<tr><td>${val.id} </td>`
-                r.innerHTML += `<td>${val.veiculos_id} </td>`
-                r.innerHTML += `<td>${val.nome} </td>`
-                r.innerHTML += `<td>${val.dia_horario} </td>`
-                r.innerHTML += `<td style="padding:3px"><button onclick='editrota(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delrota(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`
-
+                r.innerHTML += `<td>${val.rotas_id} </td>`
+                r.innerHTML += `<td>${val.lat} </td>`
+                r.innerHTML += `<td>${val.longi} </td>`
+                r.innerHTML += `<td style="padding:3px"><button onclick='editponto(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delponto(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`
                 bp.appendChild(r)
             })
         })
@@ -29,16 +28,16 @@ function readall() {
         })
 }
 
-function addRota() {
-    let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
-    let id = document.getElementById("id_v")
-    let nome = document.getElementById("name")
-    let dat = document.getElementById("dta_time")
-    if (id.value != "" && nome.value != "" && dat.value != "") {
+function addponto() {
+    let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.pontos.php"
+    let id = document.getElementById("id_p")
+    let lati = document.getElementById("lati")
+    let longi = document.getElementById("longi")
+    if (id.value != "" && longi.value != "" && lati.value != "") {
         let dados = new FormData()
-        dados.append("veiculos_id", id.value)
-        dados.append("nome", nome.value)
-        dados.append("dia_horario", dat.value)
+        dados.append("rotas_id", id.value)
+        dados.append("lat", lati.value)
+        dados.append("longi", longi.value)
         dados.append("verbo", "POST")
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
@@ -47,7 +46,7 @@ function addRota() {
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
-                    msg.innerHTML = "Rota Criada Com Sucesso.";
+                    msg.innerHTML = "Ponto de Coleta Criado Com Sucesso.";
                 }
                 setTimeout(() => { window.location.reload(); }, 3000);
             }
@@ -59,23 +58,23 @@ function addRota() {
         setTimeout(() => { msg.innerHTML = "Mensagens do sistema"; }, 3000);
     }
 }
-function editrota(v) {
+function editponto(v) {
     v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[4].innerHTML = "<button onclick='putRota(this)'>Enviar</button>";
+    v.parentNode.parentNode.cells[4].innerHTML = "<button onclick='putponto(this)'>Enviar</button>";
 }
-function putRota(y) {
+function putponto(y) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
     let id = y.parentNode.parentNode.cells[0].innerHTML
-    let id_v = y.parentNode.parentNode.cells[1].innerHTML
-    let nome = y.parentNode.parentNode.cells[2].innerHTML
-    let dat = y.parentNode.parentNode.cells[3].innerHTML
+    let id_p = y.parentNode.parentNode.cells[1].innerHTML
+    let lati = y.parentNode.parentNode.cells[2].innerHTML
+    let longi = y.parentNode.parentNode.cells[3].innerHTML
     let dados = new FormData()
     dados.append("id", id)
-    dados.append("veiculos_id", id_v)
-    dados.append("nome", nome)
-    dados.append("dia_horario", dat)
+    dados.append("rotas_id", id_p)
+    dados.append("lat", lati)
+    dados.append("longi", longi)
     dados.append("verbo", "PUT")
     if (window.confirm("Confirma Alteração dos dados?")) {
         xhr.addEventListener("readystatechange", function () {
@@ -84,7 +83,7 @@ function putRota(y) {
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro
                 } else {
-                    msg.innerHTML = "Dados da rota Alterada Com Sucesso."
+                    msg.innerHTML = "Dados do ponto Alterado Com Sucesso."
                 }
                 setTimeout(() => { window.location.reload(); }, 3000)
             }
@@ -93,21 +92,21 @@ function putRota(y) {
         xhr.send(dados)
     }
 }
-function delrota(v) {
+function delponto(v) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
     let id = v.parentNode.parentNode.cells[0].innerText
-    let dados = new FormData()
-    dados.append("id", id)
-    dados.append("verbo", "DELETE")
+    let dados = new FormData();
+    dados.append("id", id);
+    dados.append("verbo", "DELETE");
     if (window.confirm("Confirma Exclusão do id = " + id + "?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
                 console.log(this.responseText)
-                let resp = JSON.parse(this.responseText)
+                let resp = JSON.parse(this.responseText);
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro
                 } else {
-                    msg.innerHTML = "Rota excluido Com Sucesso."
+                    msg.innerHTML = "Ponto de Coleta excluido Com Sucesso."
                 }
                 setTimeout(() => { window.location.reload(); }, 3000)
             }
@@ -115,4 +114,4 @@ function delrota(v) {
         xhr.open("POST", url)
         xhr.send(dados)
     }
-}
+}    
