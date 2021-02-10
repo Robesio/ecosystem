@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="ponto.css" />
   <title>Ponto</title>
 </head>
 
@@ -17,22 +17,24 @@
           <th colspan="4">Pontos de Coletas</th>
         </tr>
         <tr>
-          <th>ID do veiculo</th>
-          <th>Longitude</th>
+          <th>ID</th>
+          <th>ID da rota</th>
           <th>Latitude</th>
-          <th>ADD</th>
+          <th>Longitude</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody id="bp">
       </tbody>
       <tfoot>
         <tr>
+          <td>Auto</td>
           <td>
-            <input type="number" id="id_v" placeholder="id do veiculo" />
+            <input type="number" id="id_p" placeholder="id do rota" />
           </td>
-          <td><input type="text" id="name" placeholder="Longitude" /></td>
+          <td><input type="text" id="lati" placeholder="Latitude" /></td>
           <td>
-            <input type="text" id="dta_time" placeholder="Latitude" />
+            <input type="text" id="longi" placeholder="Longitude" />
           </td>
           <td>
             <input type="button" value="Adicionar" id="btn" onclick="addponto()" />
@@ -44,7 +46,7 @@
   <div class="msg">
     <p id="mensagem">Mensagens do Sistema</p>
   </div>
-  <script src="index.js"></script>
+  <script src="ponto.js"></script>
 </body>
 
 </html>

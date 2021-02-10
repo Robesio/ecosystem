@@ -60,21 +60,23 @@ function addRota() {
     }
 }
 function editrota(v) {
-    v.parentNode.parentNode.cells[0].setAttribute("contentEditable", "false");
     v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[4].innerHTML = "<button onclick='putRota(this)'>Enviar</button>";
 }
-function putRota(v) {
+function putRota(y) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
-    let id_v = v.parentNode.parentNode.cells[1].innerHTML
-    let nome = v.parentNode.parentNode.cells[2].innerHTML
-    let dat = v.parentNode.parentNode.cells[3].innerHTML
-    let dados = "&veiculos_id=" + id_v
-    dados += "&nome=" + nome
-    dados += "&dia_horario=" + dat
-    dados += "&verbo=", "PUT"
+    let id = y.parentNode.parentNode.cells[0].innerHTML
+    let id_v = y.parentNode.parentNode.cells[1].innerHTML
+    let nome = y.parentNode.parentNode.cells[2].innerHTML
+    let dat = y.parentNode.parentNode.cells[3].innerHTML
+    let dados = new FormData()
+    dados.append("id", id)
+    dados.append("veiculos_id", id_v)
+    dados.append("nome", nome)
+    dados.append("dia_horario", dat)
+    dados.append("verbo", "PUT")
     if (window.confirm("Confirma Alteração dos dados?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
