@@ -71,6 +71,7 @@ function putRota(y) {
     let id_v = y.parentNode.parentNode.cells[1].innerHTML
     let nome = y.parentNode.parentNode.cells[2].innerHTML
     let dat = y.parentNode.parentNode.cells[3].innerHTML
+    //Back end nao esta funcionando
     let dados = new FormData()
     dados.append("id", id)
     dados.append("veiculos_id", id_v)
@@ -91,6 +92,7 @@ function putRota(y) {
         });
         xhr.open("POST", url)
         xhr.send(dados)
+        console.log(id,id_v,nome,dat)
     }
 }
 function delrota(v) {
