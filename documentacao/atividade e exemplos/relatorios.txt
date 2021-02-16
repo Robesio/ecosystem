@@ -18,5 +18,5 @@ rotas
 rotas		--> Murilo	em desenvolvimento
 ecopontos	--> Murilo	em desenvolvimento
 pontos coletas	--> Ian		nenhum arquivo recebido
-cooperativas	--> Hiago	em desenvolvimento
+cooperativas	--> Hiago	PENDENTE
 APP		--> Elis/Isadora em desenvolvimento

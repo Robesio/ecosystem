@@ -47,7 +47,7 @@ function addponto() {
                 } else {
                     msg.innerHTML = "Ponto de Coleta Criado Com Sucesso.";
                 }
-                setTimeout(() => { window.location.reload(); }, 500);
+                setTimeout(() => { window.location.reload(); }, 3000);
             }
         })
         xhr.open("POST", url);
@@ -64,7 +64,6 @@ function editponto(v) {
     v.parentNode.parentNode.cells[4].innerHTML = "<button onclick='putponto(this)'>Enviar</button>";
 }
 function putponto(y) {
-<<<<<<< HEAD
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.pontos.php";
     let id = y.parentNode.parentNode.cells[0].innerHTML;
     let rotas_id = y.parentNode.parentNode.cells[1].innerHTML;
@@ -76,20 +75,6 @@ function putponto(y) {
     dados.append("lat", lat);
     dados.append("longi", longi);
     dados.append("verbo", "PUT");
-=======
-    let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.pontos.php"
-    let id = y.parentNode.parentNode.cells[0].innerHTML
-    let id_p = y.parentNode.parentNode.cells[1].innerHTML
-    let lati = y.parentNode.parentNode.cells[2].innerHTML
-    let longi = y.parentNode.parentNode.cells[3].innerHTML
-    
-    let dados = new FormData()
-    dados.append("id", id)
-    dados.append("rotas_id", id_p)
-    dados.append("lat", lati)
-    dados.append("longi", longi)
-    dados.append("verbo", "PUT")
->>>>>>> 6be80463643d7dfa6206c36672c9a9f5ca89f442
     if (window.confirm("Confirma Alteração dos dados?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
@@ -108,13 +93,8 @@ function putponto(y) {
     }
 }
 function delponto(v) {
-<<<<<<< HEAD
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.pontos.php";
     let id = v.parentNode.parentNode.cells[0].innerText;
-=======
-    let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.pontos.php"
-    let id = v.parentNode.parentNode.cells[0].innerText
->>>>>>> 6be80463643d7dfa6206c36672c9a9f5ca89f442
     let dados = new FormData();
     dados.append("id", id);
     dados.append("verbo", "DELETE");

@@ -64,7 +64,6 @@ function editrota(v) {
     v.parentNode.parentNode.cells[4].innerHTML = "<button onclick='putRota(this)'>Enviar</button>";
 }
 function putRota(y) {
-<<<<<<< HEAD
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php";
     let id = y.parentNode.parentNode.cells[0].innerHTML;
     let veiculos_id = y.parentNode.parentNode.cells[1].innerHTML;
@@ -76,20 +75,6 @@ function putRota(y) {
     dados.append("nome", nome);
     dados.append("dia_horario", dia_horario);
     dados.append("verbo", "PUT");
-=======
-    let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php"
-    let id = y.parentNode.parentNode.cells[0].innerHTML
-    let id_v = y.parentNode.parentNode.cells[1].innerHTML
-    let nome = y.parentNode.parentNode.cells[2].innerHTML
-    let dat = y.parentNode.parentNode.cells[3].innerHTML
-    //Back end nao esta funcionando
-    let dados = new FormData()
-    dados.append("id", id)
-    dados.append("veiculos_id", id_v)
-    dados.append("nome", nome)
-    dados.append("dia_horario", dat)
-    dados.append("verbo", "PUT")
->>>>>>> 6be80463643d7dfa6206c36672c9a9f5ca89f442
     if (window.confirm("Confirma Alteração dos dados?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
@@ -102,14 +87,8 @@ function putRota(y) {
                 setTimeout(() => { window.location.reload(); }, 3000);
             }
         });
-<<<<<<< HEAD
         xhr.open("POST", url);
         xhr.send(dados);
-=======
-        xhr.open("POST", url)
-        xhr.send(dados)
-        console.log(id,id_v,nome,dat)
->>>>>>> 6be80463643d7dfa6206c36672c9a9f5ca89f442
     }
 }
 
