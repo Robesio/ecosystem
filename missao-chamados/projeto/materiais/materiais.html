@@ -5,7 +5,7 @@
   <title>Listar</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="style_materiais.css" />
+  <link rel="stylesheet" type="text/css" href="materiais.css" />
 </head>
 
 <body onload="carregaMateriais()">
@@ -26,16 +26,10 @@
       <tbody id="corpomateriais"></tbody>
       <tfoot>
         <tr>
-          <td>
-            <input type="number" placeholder="Cooperativas_id" id="id" />
-          </td>
+          <td>Auto</td>
           <td><input type="text" placeholder="Nome" id="nome" /></td>
-          <td>
-            <input type="text" placeholder="Cor" id="cor" />
-          </td>
-          <td>
-            <input type="button" value="Adicionar" onclick="add()" />
-          </td>
+          <td><input type="text" placeholder="Cor" id="cor" /></td>
+          <td><input type="button" value="Adicionar" onclick="add()" /></td>
         </tr>
       </tfoot>
     </table>

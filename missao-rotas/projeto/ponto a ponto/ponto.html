@@ -14,11 +14,11 @@
     <table>
       <thead>
         <tr>
-          <th colspan="4">Pontos de Coletas</th>
+          <th colspan="5">Pontos de Coletas</th>
         </tr>
         <tr>
-          <th>ID</th>
-          <th>ID da rota</th>
+          <th>Id</th>
+          <th>Id rota</th>
           <th>Latitude</th>
           <th>Longitude</th>
           <th>Ações</th>
@@ -29,16 +29,10 @@
       <tfoot>
         <tr>
           <td>Auto</td>
-          <td>
-            <input type="number" id="id_p" placeholder="id do rota" />
-          </td>
-          <td><input type="text" id="lati" placeholder="Latitude" /></td>
-          <td>
-            <input type="text" id="longi" placeholder="Longitude" />
-          </td>
-          <td>
-            <input type="button" value="Adicionar" id="btn" onclick="addponto()" />
-          </td>
+          <td><input type="number" id="rotas_id" placeholder="id rota" /></td>
+          <td><input type="number" id="lat" placeholder="Latitude" /></td>
+          <td><input type="number" id="longi" placeholder="Longitude" /></td>
+          <td><input type="button" value="Adicionar" onclick="addponto()" /></td>
         </tr>
       </tfoot>
     </table>

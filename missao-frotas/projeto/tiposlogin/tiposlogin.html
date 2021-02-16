@@ -4,20 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="../style.css" />
-  <title>Frotas</title>
+  <link rel="stylesheet" type="text/css" href="tiposlogin.css" />
+  <title>Tipos de Login</title>
 </head>
 
 <body onload="readall()">
-  <h2>Frotas</h2>
+  <h2>Tipos de Login</h2>
   <div class="table1">
     <table>
       <thead>
         <tr>
-          <th colspan="3">Gerenciar Frotas</th>
+          <th colspan="3">Gerenciar Tipos de Login</th>
         </tr>
         <tr>
-          <th>ID do Tipo de Login</th>
+          <th>Id login</th>
           <th>Tipo de Login</th>
           <th class="tamanho1">Ações</th>
         </tr>
@@ -26,13 +26,9 @@
       </tbody>
       <tfoot>
         <tr>
-          <td>
-            <input type="number" id="id" placeholder="id do Tipo de Login" />
-          </td>
+          <td>Auto</td>
           <td><input type="text" id="tipo" placeholder="Tipo de Login" /></td>
-          <td>
-            <input type="button" value="Adicionar" id="btn" onclick="addtipo()" />
-          </td>
+          <td><input type="button" value="Adicionar" id="btn" onclick="addtipo()" /></td>
         </tr>
       </tfoot>
     </table>

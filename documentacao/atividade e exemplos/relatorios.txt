@@ -1,0 +1,22 @@
+frotas 
+
+tipos de login	--> Lucas	em desenvolvimento
+veiculos	--> Pedro	PENDENTE
+usuarios	--> Jenifer 	PENDENTE
+APP		--> Gabriel	PENDENTE
+
+chamados Grupo trabalhando:
+
+status chamados	--> Paulo	em desenvolvimento
+chamados autonomo--> Paulo	em desenvolvimento
+Materiais	--> Cristian	em desenvolvimento
+Porta a porta	--> Vinicius	em desenvolvimento
+APP		--> Caio/Caique em desenvolvimento
+
+rotas
+
+rotas		--> Murilo	em desenvolvimento
+ecopontos	--> Murilo	em desenvolvimento
+pontos coletas	--> Ian		nenhum arquivo recebido
+cooperativas	--> Hiago	PENDENTE
+APP		--> Elis/Isadora em desenvolvimento

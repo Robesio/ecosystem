@@ -27,16 +27,13 @@ function carregaMateriais() {
 
 function add() {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.materiais.php"
-    let id = document.getElementById("id")
-    let nome = document.getElementById("nome")
-    let cor = document.getElementById("cor")
-    if (id.value != "" && nome.value != "" && cor.value != "") {
-
-        let dados = new FormData()
-        dados.append("id", id.value)
-        dados.append("nome", nome.value)
-        dados.append("cor", cor.value)
-        dados.append("verbo", "POST")
+    let nome = document.getElementById("nome");
+    let cor = document.getElementById("cor");
+    if (nome.value != "" && cor.value != "") {
+        let dados = new FormData();
+        dados.append("nome", nome.value);
+        dados.append("cor", cor.value);
+        dados.append("verbo", "POST");
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
                 let resp = JSON.parse(this.responseText);
@@ -44,7 +41,7 @@ function add() {
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
-                    msg.innerHTML = "Criado Com Sucesso.";
+                    msg.innerHTML = "Material Criado Com Sucesso.";
                 }
                 setTimeout(() => { window.location.reload(); }, 3000);
             }
@@ -103,7 +100,7 @@ function del(e) {
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
-                    msg.innerHTML = "Ecoponto Deletar Com Sucesso!";
+                    msg.innerHTML = "Material Deletar Com Sucesso!";
                 }
                 setTimeout(() => { window.location.reload(); }, 3000);
             }
