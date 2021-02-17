@@ -29,13 +29,13 @@ function readall() {
 
 function addponto() {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.pontos.php";
-    let id = document.getElementById("id_p");
-    let lati = document.getElementById("lati");
+    let rotas_id = document.getElementById("rotas_id");
+    let lat = document.getElementById("lat");
     let longi = document.getElementById("longi");
-    if (id.value != "" && longi.value != "" && lati.value != "") {
+    if (rotas_id.value != "" && longi.value != "" && lat.value != "") {
         let dados = new FormData();
-        dados.append("rotas_id", id.value);
-        dados.append("lat", lati.value);
+        dados.append("rotas_id", rotas_id.value);
+        dados.append("lat", lat.value);
         dados.append("longi", longi.value);
         dados.append("verbo", "POST");
         xhr.addEventListener("readystatechange", function () {
