@@ -1,6 +1,11 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 /*@media only screen and (max-device-width: 900px) {
 .menu { width:100%; }
+}
+body {
+    background-image: url("./img/log.jpg");
+    background-repeat: no-repeat;
+    background-size: 1367px 625px;
 }*/
 h2 {
     margin: 0;
@@ -14,8 +19,8 @@ div {
 }
 .msg {
     border-radius: 7px;
-    margin: 0 27%;
-    width: 660px;
+    margin: 0 30%;
+    width: 530px;
     text-align: center;
     font-size: 1.8em;
     font-family: Arial, sans-serif;
@@ -25,7 +30,7 @@ div {
     background: linear-gradient(to right, #001510, #00bf8f); 
 }
 .table1 {
-    margin: 1% 0 0 26%;
+    margin: 1% 0 0 32%;
     width: 800px;
     font-size: 1.6em;
     border-radius: 7px;

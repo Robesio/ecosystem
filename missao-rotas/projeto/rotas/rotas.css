@@ -1,6 +1,11 @@
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 /*@media only screen and (max-device-width: 900px) {
 .menu { width:100%; }
+}
+body {
+    background-image: url("./img/rot.jpg");
+    background-repeat: no-repeat;
+    background-size: 1367px 625px;
 }*/
 h2 {
     margin: 0;
