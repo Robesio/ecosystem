@@ -29,10 +29,17 @@ function readall() {
 
 function addponto() {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.pontos.php";
+<<<<<<< HEAD
     let rotas_id = document.querySelector("#rotas_id");
     let lat = document.querySelector("#lat");
     let longi = document.querySelector("#longi");
     if (rotas_id.value != "" && lat.value != "" && longi.value != "") {
+=======
+    let rotas_id = document.getElementById("rotas_id");
+    let lat = document.getElementById("lat");
+    let longi = document.getElementById("longi");
+    if (rotas_id.value != "" && longi.value != "" && lat.value != "") {
+>>>>>>> 33f526d9b4d882c47d257eb74af9ff0323743699
         let dados = new FormData();
         dados.append("rotas_id", rotas_id.value);
         dados.append("lat", lat.value);
