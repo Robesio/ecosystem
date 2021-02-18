@@ -63,12 +63,13 @@ function addEcoponto() {
     }
 }
 
-function editEcoponto(v) {
-    v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[4].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[5].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[6].innerHTML = "<button onclick='putEcoponto(this)'>Enviar</button>";
+function editEcoponto(e) {
+    e.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
+    e.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
+    e.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
+    e.parentNode.parentNode.cells[4].setAttribute("contentEditable", "true");
+    e.parentNode.parentNode.cells[5].setAttribute("contentEditable", "true");
+    e.parentNode.parentNode.cells[6].innerHTML = "<button onclick='putEcoponto(this)'>Enviar</button>";
 }
 
 function putEcoponto(e) {
@@ -81,10 +82,10 @@ function putEcoponto(e) {
     let longi = e.parentNode.parentNode.cells[5].innerHTML;
 
     let dados = new FormData();
-    dados.append("id", id)
+    dados.append("id", id);
     dados.append("cooperativas_id", cooperativas_id);
     dados.append("nome", nome);
-    dados.append("descricao", descricao)
+    dados.append("descricao", descricao);
     dados.append("lat", lat);
     dados.append("longi", longi);
     dados.append("verbo", "PUT");
