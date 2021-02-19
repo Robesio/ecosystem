@@ -1,0 +1,105 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+/*@media only screen and (max-device-width: 900px) {
+.menu { width:100%; }
+}*/
+h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+    color:rgb(6, 196, 243);
+}
+div {
+    text-align: center;
+}
+.msg {
+    border-radius: 7px;
+    margin: 0 25%;
+    width: 756px;
+    text-align: center;
+    font-size: 1.8em;
+    font-family: Arial, sans-serif;
+    color:rgb(6, 196, 243);
+    background: #00bf8f;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #001510, #00bf8f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.table1 {
+    margin: 0.5% 30%;
+    width: 800px;
+    font-size: 1.6em;
+    border-radius: 7px;
+}
+th {
+    font-family: Arial, sans-serif;
+    color:rgba(6, 196, 243, 0.527);
+    background: #00bf8f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #001510, #00bf8f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 1em;
+    padding: 11px;
+    border-radius: 7px;
+    /*text-shadow: rgb(8, 8, 8) 8px 2px 8px;*/
+}
+.tamanho {
+    padding: 10px 50px;
+}
+.tamanho1 {
+    padding: 10px 35px;
+}
+td {
+    font-size: 0.8em;
+    border-radius: 7px;
+    padding: 13px 5px;
+    color: rgb(7, 108, 126);
+    background: #8e9eab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+td input[type="text"] {
+    width: 120px;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 0.7em;
+    outline: none;
+    background: none;
+    color: rgb(7, 108, 126);
+}
+td input[type="number"] {
+    width: 100px;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 0.7em;
+    outline: none;
+    background: none;
+    color: rgb(7, 108, 126);
+}
+td input[type="button"] {
+    width: 120px;
+    padding: 5px;
+    font-size: 1em;
+    border-radius: 4px;
+    color: white;
+    background: #00bf8f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #001510, #00bf8f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: Helvetica, sans-serif;
+    text-shadow: rgb(0, 0, 0) 8px 3px 8px;
+}
+::placeholder{
+    font-size: 1em;
+    color: rgb(7, 108, 126);
+}
+button {
+    font-size: 1em; /*fonte da tabela e botoes*/
+    border-radius: 8px;
+    color: white;
+    background: #00bf8f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #001510, #00bf8f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: OCR A Std, monospace;
+    text-shadow: rgb(0, 0, 0) 8px 3px 8px;
+    padding: 4px 23px;
+}

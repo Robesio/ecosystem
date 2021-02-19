@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="veiculo.css" />
+  <title>Veículos</title>
+</head>
+
+<body onload="readall()">
+  <h2>Veículos</h2>
+  <div class="table1">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="7">Gerenciar Veículos</th>
+        </tr>
+        <tr>
+          <th>Id Vei</th>
+          <th>Id Coop</th>
+          <th>Placa</th>
+          <th>Modelo</th>
+          <th>Marca</th>
+          <th>Capacidade de Carga</th>
+          <th class="tamanho1">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="bp">
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Auto</td>
+          <td><input type="number" id="cooperativas_id" placeholder="id_Coope" /></td>
+          <td><input type="text" id="placa" placeholder="Placa" /></td>
+          <td><input type="text" id="modelo" placeholder="Modelo" /></td>
+          <td><input type="text" id="marca" placeholder="Marca" /></td>
+          <td><input type="number" id="capacidade" placeholder="Carga - Kg" /> </td>
+          <td><input type="button" value="Adicionar" onclick="addveiculo()" /></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="msg">
+    <p id="mensagem">Mensagens do Sistema</p>
+  </div>
+  <script src="veiculos.js"></script>
+</body>
+
+</html>

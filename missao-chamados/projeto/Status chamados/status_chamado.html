@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="status_chamado.css" />
+  <title>Chamados Status</title>
+</head>
+
+<body onload="carregaChamado()">
+  <h2>Chamados Status</h2>
+  <div class="table1">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3">Gerenciar Status</th>
+        </tr>
+        <tr>
+          <th>Id</th>
+          <th>Status</th>
+          <th class="tamanho1">Ações</th>
+        </tr>
+      </thead>
+      <tbody id="corpochamados"></tbody>
+      <tfoot>
+        <tr>
+          <td>Auto</td>
+          <td>
+            <input type="text" placeholder="status_chamado" id="status_chamado" />
+          </td>
+          <td>
+            <input type="button" value="Adicionar" onclick="addChamados()" />
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="msg">
+    <p id="mensagem">Mensagens do Sistema</p>
+  </div>
+  <script src="status_chamado.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="rota.css" />
+  <title>Cooperativas Ecosystem</title>
+</head>
+
+<body onload="carregaCooperativas()">
+  <h2>Pontos de Coletas</h2>
+  <div class="table1">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="7">Cadastro de Cooperativas</th>
+        </tr>
+        <tr>
+          <th>Id</th>
+          <th>Nome da Cooperativa</th>
+          <th>Cadastrar</th>
+      </tr>
+      </thead>
+      <tbody id="empresacoope"></tbody>
+      </tbody>
+      <tfoot>
+        <tr>
+          <form>
+            <td><label>auto</label></td>
+              <td><input type="text" placeholder="Inserir a Cooperativa"  id="nome" /></td>
+              <td>
+                <input type="button" value="Cadastrar" onclick="cadastro()" />
+              </td>
+          </form>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="msg">
+    <p id="mensagem"></p>
+  </div>
+  <script src="empresa.js"></script>
+</body>
+
+</html>

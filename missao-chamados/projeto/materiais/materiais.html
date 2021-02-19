@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Listar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="materiais.css" />
+</head>
+
+<body onload="carregaMateriais()">
+  <h2>Adicionar Materiais</h2>
+  <div class="table1">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="4">Gerenciar Materiais</th>
+        </tr>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Cor</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="corpomateriais"></tbody>
+      <tfoot>
+        <tr>
+          <td>Auto</td>
+          <td><input type="text" placeholder="Nome" id="nome" /></td>
+          <td><input type="text" placeholder="Cor" id="cor" /></td>
+          <td><input type="button" value="Adicionar" onclick="add()" /></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="msg">
+    <p id="mensagem">Mensagens do Sistema</p>
+  </div>
+  <script src="materiais.js"></script>
+</body>
+
+</html>
