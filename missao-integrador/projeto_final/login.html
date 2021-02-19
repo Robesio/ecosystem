@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css" />
+    <title>Login</title>
+</head>
+
+<body>
+    <form method="POST" action="../src/controll/processa.usuario.php">
+        <div class="login-box">
+            <h1>Login</h1>
+            <div class="textbox">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <input type="number" placeholder="DIGITE O CPF" required maxlength="20" maxlength="2" id="password"
+                    autofocus>
+            </div>
+            <div class="textbox">
+                <i class="fa fa-lock"></i>
+                <input type="password" placeholder="Password" required maxlength="15" id="password">
+            </div>
+            <input class="btn" type="submit" value="log into">
+            <div>
+                <p id="mensagem">Mensagens do Sistema</p>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

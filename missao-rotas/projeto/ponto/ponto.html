@@ -4,43 +4,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="ponto.css" />
+  <link rel="stylesheet" type="text/css" href="../../../missao-integrador/projeto_final/index.css" />
   <title>Ponto</title>
 </head>
 
 <body onload="readall()">
   <h2>Pontos de Coletas</h2>
-  <div class="table1">
-    <table>
-      <thead>
-        <tr>
-          <th colspan="5">Pontos de Coletas</th>
-        </tr>
-        <tr>
-          <th>Id</th>
-          <th>Id rota</th>
-          <th>Latitude</th>
-          <th>Longitude</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody id="bp">
-      </tbody>
-      <tfoot>
-        <tr>
-          <td>Auto</td>
-          <td><input type="number" id="rotas_id" placeholder="id rota" /></td>
-          <td><input type="number" id="lat" placeholder="Latitude" /></td>
-          <td><input type="number" id="longi" placeholder="Longitude" /></td>
-          <td><input type="button" value="Adicionar" onclick="addponto()" /></td>
-        </tr>
-      </tfoot>
-    </table>
+
+  <div class="header">
+    <div class="space menu-content">
+      <img src="../../../missao-integrador/projeto_final/img/logo.png" alt="loooogu" id="logoImg">
+    </div>
+    <div class="menu-content">
+      <a href="#">ínicio</a>
+      <a href="#whoami">Quem Somos?</a>
+    </div>
+    <div class="menu-content">
+      <input type="button" value="Login" id="login">
+    </div>
+
   </div>
-  <div class="msg">
-    <p id="mensagem">Mensagens do Sistema</p>
-  </div>
-  <script src="ponto.js"></script>
+
+  <div class="conteudo">
+    <h1>EcoSystem</h1>
+    <hr>
+    <br>
+    <div class="menu">
+      <b><a href="../../../missao-integrador/projeto_final/index.html">Inicio</a></b>
+      <b><a href="../rotas/Rotas.html">Rotas</a></b>
+      <b><a href="../ecopontos/ecopontos.html">Ecopontos</a></b>
+      <b><a href="#">Pontos</a></b>
+    </div>
+
+    <div class="table1">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="5">Pontos de Coletas</th>
+          </tr>
+          <tr>
+            <th>Id</th>
+            <th>Id rota</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="bp">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Auto</td>
+            <td><input type="number" id="rotas_id" placeholder="id rota" /></td>
+            <td><input type="number" id="lat" placeholder="Latitude" /></td>
+            <td><input type="number" id="longi" placeholder="Longitude" /></td>
+            <td><input type="button" value="Adicionar" onclick="addponto()" /></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="msg">
+      <p id="mensagem">Mensagens do Sistema</p>
+    </div>
+    <script src="ponto.js"></script>
 </body>
 
 </html>

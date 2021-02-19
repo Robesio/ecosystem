@@ -4,39 +4,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="tiposlogin.css" />
+  <link rel="stylesheet" type="text/css" href="../../../missao-integrador/projeto_final/index.css" />
   <title>Tipos de Login</title>
 </head>
 
 <body onload="readall()">
   <h2>Tipos de Login</h2>
-  <div class="table1">
-    <table>
-      <thead>
-        <tr>
-          <th colspan="3">Gerenciar Tipos de Login</th>
-        </tr>
-        <tr>
-          <th>Id login</th>
-          <th>Tipo de Login</th>
-          <th class="tamanho1">Ações</th>
-        </tr>
-      </thead>
-      <tbody id="bp">
-      </tbody>
-      <tfoot>
-        <tr>
-          <td>Auto</td>
-          <td><input type="text" id="tipo" placeholder="Tipo de Login" /></td>
-          <td><input type="button" value="Adicionar" id="btn" onclick="addtipo()" /></td>
-        </tr>
-      </tfoot>
-    </table>
+
+  <div class="header">
+    <div class="space menu-content">
+      <img src="../../../missao-integrador/projeto_final/img/logo.png" alt="loooogu" id="logoImg">
+    </div>
+    <div class="menu-content">
+      <a href="#">ínicio</a>
+      <a href="#whoami">Quem Somos?</a>
+    </div>
+    <div class="menu-content">
+      <input type="button" value="Login" id="login">
+    </div>
+
   </div>
-  <div class="msg">
-    <p id="mensagem">Mensagens do Sistema</p>
-  </div>
-  <script src="tiposlogin.js"></script>
+
+  <div class="conteudo">
+    <h1>EcoSystem</h1>
+    <hr>
+    <br>
+    <div class="menu">
+      <b><a href="../../../missao-integrador/projeto_final/index.html">Inicio</a></b>
+      <b><a href="../veiculos/veiculos.html">Veículos</a></b>
+      <b><a href="#">Usuários</a></b>
+      <b><a href="#">Tipos de Login</a></b>
+    </div>
+
+
+
+
+    <div class="table1">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">Gerenciar Tipos de Login</th>
+          </tr>
+          <tr>
+            <th>Id login</th>
+            <th>Tipo de Login</th>
+            <th class="tamanho1">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="bp">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Auto</td>
+            <td><input type="text" id="tipo" placeholder="Tipo de Login" /></td>
+            <td><input type="button" value="Adicionar" id="btn" onclick="addtipo()" /></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="msg">
+      <p id="mensagem">Mensagens do Sistema</p>
+    </div>
+    <script src="tiposlogin.js"></script>
 </body>
 
 </html>

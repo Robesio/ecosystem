@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600">
+  <link rel="stylesheet" href="../../index.css">
+  <title>Ecopontos</title>
+</head>
+
+<body onload="carregaEcoponto()">
+  <div class="header">
+    <div class="space menu-content">
+      <img src="../../img/logo.png" alt="loooogu" id="logoImg">
+    </div>
+    <h3>Ecopontos</h3>
+  </div>
+
+  <div class="conteudo">
+    <h1>EcoSystem</h1>
+    <hr>
+    <br>
+    <div class="menu">
+      <b><a href="../../index.html">ínicio</a></b>
+      <b><a href="../index_rotas.html">Rotas</a></b>
+      <b><a href="../ponto/ponto.html">Ponto</a></b>
+      <b><a href="#">Ecopontos</a></b>
+    </div>
+    <br><br>
+    <div class="texto">
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+        eget metus velit. Nunc ornare urna sit amet velit efficitur,
+        lacinia euismod turpis cursus. Vivamus vel facilisis urna, a convallis ligula. In condimentum quam eget
+        placerat blandit.
+        Vivamus pharetra congue velit, non malesuada diam. Phasellus venenatis scelerisque lectus, vel
+        condimentum mauris dictum nec.
+        Praesent a odio ligula. Suspendisse ultrices, odio quis cursus pretium, ante elit placerat massa, a
+        condimentum velit nibh ac
+        nibh. Suspendisse imperdiet ornare volutpat. Praesent in fringilla enim. In placerat est id ipsum
+        hendrerit scelerisque.
+        Suspendisse condimentum non justo ut tincidunt. Curabitur lobortis blandit augue, ac mattis purus
+        posuere sit amet. Aenean
+        vel dictum mi, quis facilisis sapien. Vivamus posuere nibh nec tempor.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cras ac odio orci.
+        Aenean non augue ac risus dignissim commodo a sed arcu.
+        In sit amet tortor finibus, dictum augue non, semper
+        sapien. Vestibulum facilisis, sapien eu auctor faucibus,
+        urna libero aliquam purus, vel tempor tortor sapien ornare
+        augue. Ut volutpat dolor non odio scelerisque bibendum.</p>
+    </div>
+
+    <h2>Ecopontos</h2>
+    <div class="table1">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="7">Gerenciar Ecopontos</th>
+          </tr>
+          <tr>
+            <th>Id</th>
+            <th>Coop_id</th>
+            <th class="tamanho">Nome</th>
+            <th class="tamanho">Descrição</th>
+            <th>Lat</th>
+            <th>Longi</th>
+            <th class="tamanho1">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="corpoecoponto"></tbody>
+        <tfoot>
+          <tr>
+            <td>Auto</td>
+            <td>
+              <input type="number" placeholder="Coope_id" id="cooperativas_id" />
+            </td>
+            <td><input type="text" placeholder="Nome" id="nome" /></td>
+            <td>
+              <input type="text" placeholder="Descrição" id="descricao" />
+            </td>
+            <td><input type="number" placeholder="Lat" id="lat" /></td>
+            <td><input type="number" placeholder="Longi" id="longi" /></td>
+            <td>
+              <input type="button" value="Adicionar" onclick="addEcoponto()" />
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="msg">
+      <p id="mensagem">Mensagens do Sistema</p>
+    </div>
+    <script src="../rotas/rotas.js"></script>
+</body>
+
+</html>

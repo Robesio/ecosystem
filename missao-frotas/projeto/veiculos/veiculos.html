@@ -4,47 +4,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="veiculo.css" />
+  <link rel="stylesheet" type="text/css" href="../../../missao-integrador/projeto_final/index.css" />
   <title>Veículos</title>
 </head>
 
 <body onload="readall()">
   <h2>Veículos</h2>
-  <div class="table1">
-    <table>
-      <thead>
-        <tr>
-          <th colspan="7">Gerenciar Veículos</th>
-        </tr>
-        <tr>
-          <th>Id Vei</th>
-          <th>Id Coop</th>
-          <th>Placa</th>
-          <th>Modelo</th>
-          <th>Marca</th>
-          <th>Capacidade de Carga</th>
-          <th class="tamanho1">Ações</th>
-        </tr>
-      </thead>
-      <tbody id="bp">
-      </tbody>
-      <tfoot>
-        <tr>
-          <td>Auto</td>
-          <td><input type="number" id="cooperativas_id" placeholder="id_Coope" /></td>
-          <td><input type="text" id="placa" placeholder="Placa" /></td>
-          <td><input type="text" id="modelo" placeholder="Modelo" /></td>
-          <td><input type="text" id="marca" placeholder="Marca" /></td>
-          <td><input type="number" id="capacidade" placeholder="Carga - Kg" /> </td>
-          <td><input type="button" value="Adicionar" onclick="addveiculo()" /></td>
-        </tr>
-      </tfoot>
-    </table>
+  <div class="header">
+    <div class="space menu-content">
+      <img src="../../../missao-integrador/projeto_final/img/logo.png" alt="loooogu" id="logoImg">
+    </div>
+    <div class="menu-content">
+      <a href="#">ínicio</a>
+      <a href="#whoami">Quem Somos?</a>
+    </div>
+    <div class="menu-content">
+      <input type="button" value="Login" id="login">
+    </div>
+
   </div>
-  <div class="msg">
-    <p id="mensagem">Mensagens do Sistema</p>
-  </div>
-  <script src="veiculos.js"></script>
+
+  <div class="conteudo">
+    <h1>EcoSystem</h1>
+    <hr>
+    <br>
+    <div class="menu">
+      <b><a href="../../../missao-integrador/projeto_final/index.html">Inicio</a></b>
+      <b><a href="#">Veículos</a></b>
+      <b><a href="#">Usuários</a></b>
+      <b><a href="../tiposlogin/tiposlogin.html">Tipos de Login</a></b>
+    </div>
+
+
+    <div class="table1">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="7">Gerenciar Veículos</th>
+          </tr>
+          <tr>
+            <th>Id Vei</th>
+            <th>Id Coop</th>
+            <th>Placa</th>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Capacidade de Carga</th>
+            <th class="tamanho1">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="bp">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Auto</td>
+            <td><input type="number" id="cooperativas_id" placeholder="id_Coope" /></td>
+            <td><input type="text" id="placa" placeholder="Placa" /></td>
+            <td><input type="text" id="modelo" placeholder="Modelo" /></td>
+            <td><input type="text" id="marca" placeholder="Marca" /></td>
+            <td><input type="number" id="capacidade" placeholder="Carga - Kg" /> </td>
+            <td><input type="button" value="Adicionar" onclick="addveiculo()" /></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="msg">
+      <p id="mensagem">Mensagens do Sistema</p>
+    </div>
+    <script src="veiculos.js"></script>
 </body>
 
 </html>
