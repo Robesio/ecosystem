@@ -58,8 +58,31 @@ function addtipo() {
 function edittipologin(v) {
     v.parentNode.parentNode.cells[0].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[3].innerHTML = "<button onclick='addtipologin(this)'>Enviar</button>";
+    v.parentNode.parentNode.cells[2].innerHTML = "<button onclick='putEcoponto(this)'>Enviar</button>";
+}
+
+function puttipologin(e) {
+    let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.tipos_login.php";
+    let id = e.parentNode.parentNode.cells[0].innerHTML;
+    let tipo = e.parentNode.parentNode.cells[1].innerHTML;
+    let dados = "&id=" + id;
+    dados += "&tipo=" + tipo;
+    dados += "&verbo=", "PUT";
+    if (window.confirm("Confirma Alteração dos dados?")) {
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === this.DONE) {
+                let resp = JSON.parse(this.responseText);
+                if (resp.hasOwnProperty("erro")) {
+                    msg.innerHTML = resp.erro;
+                } else {
+                    msg.innerHTML = "Tipo de Login Alterado Com Sucesso.";
+                }
+                setTimeout(() => { window.location.reload(); }, 3000);
+            }
+        });
+        xhr.open("POST", url);
+        xhr.send(dados);
+    }
 }
 function deltipologin(v) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.tipos_login.php"

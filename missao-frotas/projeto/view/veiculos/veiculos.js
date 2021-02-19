@@ -74,8 +74,38 @@ function editveiculos(v) {
     v.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[4].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[5].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[6].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[7].innerHTML = "<button onclick='addveiculo(this)'>Enviar</button>";
+    v.parentNode.parentNode.cells[6].innerHTML = "<button onclick='putEcoponto(this)'>Enviar</button>";
+}
+function putveiculo(e) {
+    let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.veiculos.php";
+    let id = e.parentNode.parentNode.cells[0].innerHTML;
+    let cooperativas_id = e.parentNode.parentNode.cells[1].innerHTML;
+    let placa = e.parentNode.parentNode.cells[2].innerHTML;
+    let modelo = e.parentNode.parentNode.cells[3].innerHTML;
+    let marca = e.parentNode.parentNode.cells[4].innerHTML;
+    let capacidade_carga_kg = e.parentNode.parentNode.cells[5].innerHTML;
+    let dados = "&id=" + id;
+    dados += "&cooperativas_id=" + cooperativas_id;
+    dados += "&placa=" + placa;
+    dados += "&modelo=" + modelo;
+    dados += "&marca=" + marca;
+    dados += "&capacidade_carga_kg=" + capacidade_carga_kg;
+    dados += "&verbo=", "PUT";
+    if (window.confirm("Confirma Alteração dos dados?")) {
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === this.DONE) {
+                let resp = JSON.parse(this.responseText);
+                if (resp.hasOwnProperty("erro")) {
+                    msg.innerHTML = resp.erro;
+                } else {
+                    msg.innerHTML = "Dados do Veiculo Alterado Com Sucesso.";
+                }
+                setTimeout(() => { window.location.reload(); }, 3000);
+            }
+        });
+        xhr.open("POST", url);
+        xhr.send(dados);
+    }
 }
 function delveiculos(v) {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.veiculos.php"
