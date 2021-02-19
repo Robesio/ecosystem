@@ -51,6 +51,21 @@ function addtipo() {
         setTimeout(() => { msg.innerHTML = "Mensagens do sistema"; }, 3000);
     }
 }
+<<<<<<< HEAD:missao-frotas/projeto/view/tiposlogin/tiposlogin.js
+function edittipologin(v) {
+    v.parentNode.parentNode.cells[0].setAttribute("contentEditable", "true");
+    v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
+    v.parentNode.parentNode.cells[2].innerHTML = "<button onclick='putEcoponto(this)'>Enviar</button>";
+}
+
+function puttipologin(e) {
+    let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.tipos_login.php";
+    let id = e.parentNode.parentNode.cells[0].innerHTML;
+    let tipo = e.parentNode.parentNode.cells[1].innerHTML;
+    let dados = "&id=" + id;
+    dados += "&tipo=" + tipo;
+    dados += "&verbo=", "PUT";
+=======
 function edittipologin(t) {
     t.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     t.parentNode.parentNode.cells[2].innerHTML = "<button onclick='putTipologin(this)'>Enviar</button>";
@@ -64,6 +79,7 @@ function putTipologin(e) {
     dados.append("id", id)
     dados.append("tipo", tipo);
     dados.append("verbo", "PUT");
+>>>>>>> 281528cb08e00730ae89576efda718855620cfe3:missao-frotas/projeto/tiposlogin/tiposlogin.js
     if (window.confirm("Confirma Alteração dos dados?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
@@ -71,7 +87,11 @@ function putTipologin(e) {
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
+<<<<<<< HEAD:missao-frotas/projeto/view/tiposlogin/tiposlogin.js
+                    msg.innerHTML = "Tipo de Login Alterado Com Sucesso.";
+=======
                     msg.innerHTML = "Dados do Login Alterada Com Sucesso.";
+>>>>>>> 281528cb08e00730ae89576efda718855620cfe3:missao-frotas/projeto/tiposlogin/tiposlogin.js
                 }
                 setTimeout(() => { window.location.reload(); }, 3000);
             }
