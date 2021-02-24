@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'listar',
     loadChildren: () => import('./pages/listar/listar.module').then( m => m.ListarPageModule)
   },
+  {
+    path: 'porta-porta',
+    loadChildren: () => import('./porta-porta/porta-porta.module').then( m => m.PortaPortaPageModule)
+  },
 ];
 
 @NgModule({
