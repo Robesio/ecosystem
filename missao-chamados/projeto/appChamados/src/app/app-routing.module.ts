@@ -4,51 +4,70 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomePageModule),
   },
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () =>
+      import('./pages/login/login.module').then((m) => m.LoginPageModule),
   },
   {
     path: 'cadastro',
-    loadChildren: () => import('./pages/cadastro/cadastro.module').then( m => m.CadastroPageModule)
+    loadChildren: () =>
+      import('./pages/cadastro/cadastro.module').then(
+        (m) => m.CadastroPageModule
+      ),
   },
   {
     path: 'localizacao',
-    loadChildren: () => import('./pages/localizacao/localizacao.module').then( m => m.LocalizacaoPageModule)
+    loadChildren: () =>
+      import('./pages/localizacao/localizacao.module').then(
+        (m) => m.LocalizacaoPageModule
+      ),
   },
   {
     path: 'ponto-coleta',
-    loadChildren: () => import('./pages/ponto-coleta/ponto-coleta.module').then( m => m.PontoColetaPageModule)
+    loadChildren: () =>
+      import('./pages/ponto-coleta/ponto-coleta.module').then(
+        (m) => m.PontoColetaPageModule
+      ),
   },
   {
     path: 'consultar',
-    loadChildren: () => import('./pages/consultar/consultar.module').then( m => m.ConsultarPageModule)
+    loadChildren: () =>
+      import('./pages/consultar/consultar.module').then(
+        (m) => m.ConsultarPageModule
+      ),
   },
   {
     path: 'abrir',
-    loadChildren: () => import('./pages/abrir/abrir.module').then( m => m.AbrirPageModule)
+    loadChildren: () =>
+      import('./pages/abrir/abrir.module').then((m) => m.AbrirPageModule),
   },
   {
     path: 'listar',
-    loadChildren: () => import('./pages/listar/listar.module').then( m => m.ListarPageModule)
+    loadChildren: () =>
+      import('./pages/listar/listar.module').then((m) => m.ListarPageModule),
   },
   {
     path: 'porta-porta',
-    loadChildren: () => import('./porta-porta/porta-porta.module').then( m => m.PortaPortaPageModule)
+    loadChildren: () =>
+      import('./pages/porta-porta/porta-porta.module').then(
+        (m) => m.PortaPortaPageModule
+      ),
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
