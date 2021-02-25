@@ -62,11 +62,12 @@ function addponto() {
             setTimeout(() => { msg.innerHTML = "Mensagens do sistema"; }, 3000);
         }
     }
-    function editponto(v) {
-        v.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
-        v.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
-        v.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
-        v.parentNode.parentNode.cells[4].innerHTML = "<button onclick='putponto(this)'>Enviar</button>";
+}
+    function editponto(y) {
+        y.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
+        y.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
+        y.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
+        y.parentNode.parentNode.cells[4].innerHTML = "<button onclick='putponto(this)'>Enviar</button>";
     }
     function putponto(y) {
         let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.pontos.php";
@@ -74,6 +75,7 @@ function addponto() {
         let rotas_id = y.parentNode.parentNode.cells[1].innerHTML;
         let lat = y.parentNode.parentNode.cells[2].innerHTML;
         let longi = y.parentNode.parentNode.cells[3].innerHTML;
+       
         let dados = new FormData();
         dados.append("id", id);
         dados.append("rotas_id", rotas_id);
@@ -102,10 +104,11 @@ function addponto() {
         let dados = new FormData();
         dados.append("id", id);
         dados.append("verbo", "DELETE");
+        console.log(dados)
         if (window.confirm("Confirma Exclusão do id = " + id + "?")) {
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === this.DONE) {
-                    console.log(this.responseText)
+                    //console.log(this.responseText)
                     let resp = JSON.parse(this.responseText);
                     if (resp.hasOwnProperty("erro")) {
                         msg.innerHTML = resp.erro;
@@ -119,4 +122,3 @@ function addponto() {
             xhr.send(dados)
         }
     }
-}

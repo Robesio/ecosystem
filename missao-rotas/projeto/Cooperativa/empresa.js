@@ -92,7 +92,7 @@ function delCooperativas(v) {
     if (window.confirm("Confirma Exclusão do id = " + id + "?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
-                //console.log(this.responseText)
+                console.log(this.responseText)
                 let resp = JSON.parse(this.responseText);
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro
