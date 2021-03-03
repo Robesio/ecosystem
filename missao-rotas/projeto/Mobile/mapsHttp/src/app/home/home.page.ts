@@ -39,28 +39,28 @@ export class HomePage {
 
 
     this.geolocation.getCurrentPosition().then((resp) => {
-      // Localização do atual Latitude Longitude
-     this.localizacaoReferencia = { lat: resp.coords.latitude, lng: resp.coords.longitude };
-     map.setCenter(this.localizacaoReferencia);
+        // Localização do atual Latitude Longitude
+      this.localizacaoReferencia = { lat: resp.coords.latitude, lng: resp.coords.longitude };
+      map.setCenter(this.localizacaoReferencia);
 
-     const marker = new google.maps.Marker({
-      position:  this.localizacaoReferencia,
-      map: map,
+      const marker = new google.maps.Marker({
+        position:  this.localizacaoReferencia,
+        map: map,
 
-      //Titulo
-      title: "Localização Atual",
+        //Titulo
+        title: "Localização Atual",
 
-      //Animção
-      animation: google.maps.Animation.DROP, // BOUNCE
+        //Animção
+        animation: google.maps.Animation.DROP, // BOUNCE
 
-      //Icone
-      icon: 'assets/placeholder.png'
+        //Icone
+        icon: 'assets/placeholder.png'
 
-      
-    });  
+        
+      });  
 
 
-   });
+    });
 
    
     // Obtém as informações do Ecoponto do backend
