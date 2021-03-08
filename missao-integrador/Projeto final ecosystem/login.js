@@ -16,13 +16,13 @@ function acessar() {
                 if (resp.length === 0) {
                     msg.innerHTML = "Documento ou senha invalido";
                 } else {
-                    if (resp[0].tipo === "1") {
+                    if (resp[0].tipo === "3") {
                         destino += "index.html";
-                    } else if (resp[0].tipo === "2") {
-                        destino += "perfil.html";
                     } else {
-                        destino += "index.html";
+                        destino += "index-comum.html";
                     }
+                    localStorage.setItem('type_user', resp[0].tipo);
+                    localStorage.setItem('id_user', resp[0].id);
                     window.location.href = destino + "?document=" + resp[0].nome + "&id=" + resp[0].id;
                 }
             }

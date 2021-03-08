@@ -1,0 +1,225 @@
+@charset 'UTF-8';
+
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@font-face{font-family:'FontAwesome';src:url('font/fontawesome-webfont.eot?v=4.0.1');src:url('font/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'),url('font/fontawesome-webfont.woff?v=4.0.1') format('woff'),url('font/fontawesome-webfont.ttf?v=4.0.1') format('truetype'),url('font/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+*{margin: 0;}
+body{
+    background: url(paginas/img/background.jpg) no-repeat;
+    background-size: cover;
+    height: 250vh;
+    background-position: left;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: 100%;
+    background-color: rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    flex-direction: row;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 15px;
+    transition: all ease 0.5s;
+}
+
+.header a:houver{
+    background-color: #211b4385;
+}
+
+.header #logoImg {
+    width: 115px;
+}
+
+.header #login{
+    min-width: 100px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    cursor:pointer;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 0%;
+    background-color: rgba(226, 224, 224, 0.787);
+}
+
+.conteudo hr {
+    width: 80%;
+}
+
+.menu{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+#abacate{
+    display: flex;
+    padding: 15px;
+    font-size: 23px;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+.menu a {
+    color: #000;
+    text-decoration: none;
+}
+
+#m{
+    width: 70%;
+
+}
+
+.image{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto{
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: justify;
+}
+
+#lixo{
+    font-size: 40px;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+p{
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+}
+
+b{
+    font-size: 22px
+}
+.pespic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pessoas {
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pespic p{
+    transition: 0.25s;
+}
+
+.pespic img {
+    width: 150px;
+}
+
+.pespic p:hover {
+    font-size: 20px;
+}
+
+#img-rotas{
+    width: 300px;
+}
+
+#whoami {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer {
+	position: relative;
+	text-align: center;
+    background-color: rgb(14, 13, 13);
+}
+
+#footer h2 {
+    text-align: center;
+    font-size: 60px;
+	color: rgb(170, 170, 170);
+}
+
+#copyright {
+	position: relative;
+	text-align: center;
+    font-size: 20px;
+	color: rgb(170, 170, 170);
+}
+
+ul.contact {
+	padding: 1.5em 0 0 0;
+}
+
+ul.contact li {
+	display: inline-block;
+	margin: 0 3em;
+}
+
+ul.contact li span {
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.contact a {
+	color: rgb(170, 170, 170);
+	font-size: 50px;
+
+}
+
+ul.contact li a:hover {
+	color: rgb(170, 170, 170);
+}
+
+

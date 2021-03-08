@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600">
+  <link rel="stylesheet" type="text/css" href="ecopontos.css" />
+  <link rel="stylesheet" href="../../../login-ind.css">
+  <title>EcoSystem</title>
+</head>
+
+<body onload="carregaEcoponto()">
+  <div class="header">
+    <div class="space menu-content">
+      <img src="../../img/logo.png" alt="loooogu" id="logoImg">
+    </div>
+    <div class="menu-content">
+      <a href="../../../index.html">ínicio</a>
+    </div>
+    <div class="menu-content">
+      <input type="button" value="Sair" id="login">
+  </div>
+  </div>
+
+  <div class="conteudo">
+    <h1>EcoSystem</h1>
+    <hr>
+    <br><br>
+    <div class="menu">
+      <b><a id="abacate" href="../Cooperativa/rotaEmp.html">Cooperativa</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <b><a id="abacate" href="../ponto/ponto.html">Pontos</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <b><a id="abacate" href="../rotas/rotas.html">Rotas</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="menu">
+      <b><a></a></b>
+      <b><a id="abacate" href="../rotas.html">Retornar a Rotas</a></b>
+      <b><a></a></b>
+    </div>
+    <br><br><br>
+    <h2>Ecopontos</h2>
+    <br><br>
+    <div class="table1">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="7">Gerenciar Ecopontos</th>
+          </tr>
+          <tr>
+            <th>Id</th>
+            <th>Id_coop</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Lat</th>
+            <th>Longi</th>
+            <th class="tamanho1">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="corpoecoponto"></tbody>
+        <tfoot>
+          <tr>
+            <td>Auto</td>
+            <td><input type="number" placeholder="Coope_id" id="cooperativas_id" /></td>
+            <td><input type="text" placeholder="Nome" id="nome" /></td>
+            <td><input type="text" placeholder="Descrição" id="descricao" /> </td>
+            <td><input type="number" placeholder="Lat" id="lat" /></td>
+            <td><input type="number" placeholder="Longi" id="longi" /></td>
+            <td><input type="button" value="Adicionar" onclick="addEcoponto()" /></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <br><br>
+    <div class="msg">
+      <p id="mensagem">Mensagens do Sistema</p>
+    </div>
+    <br><br><br><br>
+  </div>
+  <div id="footer">
+    <div class="container">
+        <section>
+            <br><br><br><br>
+                <h2>Mais de EcoSystem</h2>
+            <br><br>
+            <ul class="contact">
+                <li><a href="#" class="fa fa-facebook-square"></a>
+                </li>
+                <li><a href="#" class="fa fa-twitter-square"></a>
+                </li>
+                <li><a href="#" class="fa fa-youtube-square"></a>
+                </li>
+                <li><a href="#" class="fa fa-user"></a>
+                </li>
+            </ul>
+        </section>
+    </div>
+<br><br><br><br><br>
+<hr>
+<br>
+<div id="copyright">
+        E-mail: ecosystem@sistem.org.br<br/>
+        Telefone: (11) 3852-9345
+</div>
+<br>
+</div>
+
+</body>
+</html>
