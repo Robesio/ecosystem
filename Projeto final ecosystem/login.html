@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" href="login-ind.css">
+    <title>EcoSystem</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="space menu-content">
+            <img src="paginas/img/logo.png" alt="loooogu" id="logoImg">
+        </div>
+        <div class="menu-content">
+            <a href="#">ínicio</a>
+        </div>
+        <div class="menu-content">
+            <a id="login"
+                href="paginas/usuarios_co_au/usuario_co_au_cadastrar/usuario_co_au_cadastra.html">Cadastre-se</a>
+        </div>
+    </div>
+    <div class="conteudo">
+        <h1>EcoSystem</h1>
+        <hr>
+        <div class="conteudo">
+            <form>
+                <fieldset>
+                    <div class="login-box">
+                        <h2 id="titulo">Login</h2>
+                        <br><br>
+                        <div class="textbox">
+                            <i class="fa fa-id-card" aria-hidden="true"></i>
+                            <input type="number" placeholder="Digite seu CPF" required maxlength="11" maxlength="2"
+                                id="document" autofocus>
+                        </div>
+                        <div class="textbox">
+                            <i class="fa fa-key" aria-hidden="true"></i>
+                            <input type="password" placeholder="Digite sua SENHA" required maxlength="30" id="password">
+                        </div>
+                        <input class="btn" type="button" value="Acessar" onclick="acessar()">
+                        <br><br><br><br><br><br><br>
+                        <div>
+                            <p id="mensagem">Mensagens do Sistema</p>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <br><br><br><br><br>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <section>
+                <br><br><br><br>
+                <h2>Mais de EcoSystem</h2>
+                <br><br>
+                <ul class="contact">
+                    <li><a href="#" class="fa fa-facebook-square"></a>
+                    </li>
+                    <li><a href="#" class="fa fa-twitter-square"></a>
+                    </li>
+                    <li><a href="#" class="fa fa-youtube-square"></a>
+                    </li>
+                    <li><a href="#" class="fa fa-user"></a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <br><br><br><br><br>
+        <hr>
+        <br>
+        <div id="copyright">
+            E-mail: ecosystem@sistem.org.br<br />
+            Telefone: (11) 3852-9345
+        </div>
+        <br>
+    </div>
+    <script src="login.js"></script>
+</body>
+
+</html>

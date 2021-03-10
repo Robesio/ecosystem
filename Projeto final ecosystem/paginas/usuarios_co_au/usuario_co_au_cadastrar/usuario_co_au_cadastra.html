@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600">
+  <link rel="stylesheet" type="text/css" href="usuario_co_au_cadastra.css">
+  <link rel="stylesheet" href="../../../login-ind.css">
+  <title>EcoSystem</title>
+</head>
+
+<body onload="readall()">
+  <div class="header">
+    <div class="space menu-content">
+      <img src="../../img/logo.png" alt="loooogu" id="logoImg">
+    </div>
+    <div class="menu-content">
+      <a href="../../../index-comum.html">ínicio</a>
+    </div>
+    <div class="menu-content">
+      <input type="button" value="Sair" id="login" onclick="sair()">
+    </div>
+  </div>
+
+  <div class="conteudo">
+    <h1>EcoSystem</h1>
+    <hr>
+    <br><br>
+    <div class="menu">
+    </div>
+    <br><br><br>
+    <br><br>
+    <div class="table1">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="11">Para se Cadastrar Preencha Todos os Campos</th>
+          </tr>
+          <tr>
+            <th>Nome</th>
+            <th>Celular</th>
+            <th>Rua</th>
+            <th>Número</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>Uf</th>
+            <th>Cpf</th>
+            <th>Tipo</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="corpousuario">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><input type="text" id="nome" placeholder="nome" /></td>
+            <td><input type="number" id="celular" placeholder="celular" /></td>
+            <td><input type="text" id="rua" placeholder="rua" /></td>
+            <td><input type="number" id="numero" placeholder="numero" /></td>
+            <td><input type="text" id="bairro" placeholder="bairro" /></td>
+            <td><input type="text" id="cidade" placeholder="cidade" /></td>
+            <td><input type="text" id="uf" placeholder="uf" /></td>
+            <td><input type="number" id="cpf" placeholder="cpf" /></td>
+            <td><input type="number" id="tipo" placeholder="1 ou 2" />
+            </td>
+            </td>
+            </td>
+            <td><input type="button" value="Adicionar" onclick="addusuarios()" /></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <br><br>
+    <div class="msg">
+      <p id="mensagem">Mensagens do Sistema</p>
+    </div>
+    <br><br><br>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <section>
+        <br><br><br><br>
+        <h2>Mais de EcoSystem</h2>
+        <br><br>
+        <ul class="contact">
+          <li><a href="#" class="fa fa-facebook-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-twitter-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-youtube-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-user"></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <br><br><br><br><br>
+    <hr>
+    <br>
+    <div id="copyright">
+      E-mail: ecosystem@sistem.org.br<br />
+      Telefone: (11) 3852-9345
+    </div>
+    <br>
+  </div>
+  <script>
+    function sair() {
+      window.location.href = "../../../login.html";
+    }
+  </script>
+</body>
+
+</html>

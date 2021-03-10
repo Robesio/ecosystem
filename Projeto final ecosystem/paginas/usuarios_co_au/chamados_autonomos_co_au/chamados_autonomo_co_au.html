@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600">
+  <link rel="stylesheet" href="../../../login-ind.css">
+  <link rel="stylesheet" type="text/css" href="chamados_autonomo_co_au.css">
+  <title>EcoSystem</title>
+</head>
+
+<body onload="carregarChamados()">
+  <div class="header">
+    <div class="space menu-content">
+      <img src="../../img/logo.png" alt="loooogu" id="logoImg">
+    </div>
+    <div class="menu-content">
+      <a href="../../../index-comum.html">ínicio</a>
+    </div>
+    <div class="menu-content">
+      <input type="button" value="Sair" id="login">
+    </div>
+  </div>
+
+  <div class="conteudo">
+    <h1>EcoSystem</h1>
+    <hr>
+    <br><br><br>
+    <div class="menu">
+      <b><a id="abacate" href="../ecopontos_co_au/ecopontos_co_au.html">EcoPontos</a></b>
+      <b><a id="abacate" href="../ponto_co_au/ponto_co_au.html">Ponto</a></b>
+      <b><a id="abacate" href="../porta_a_porta_co_au/porta_porta_co_au.html">Porta</a></b>
+      <b><a id="abacate" href="../status_chamados_co_au/status_chamado_co_au.html">Status</a></b>
+    </div>
+    <br><br>
+    <hr>
+    <br><br>
+    <div class="menu">
+      <b><a id="abacate" href="../ler_dados_usuarios/ler_dados_usuario.html">Usuarios</a></b>
+      <b><a id="abacate" href="../rotas_co_au/rotas_co_au.html">Rotas</a></b>
+      <b><a id="abacate" href="../materiais_co_au/materiais_co-au.html">Materiais</a></b>
+    </div>
+    <br><br><br><br>
+    <h2>Chamados Autonomos</h2>
+    <br><br>
+    <div class="table1">
+      <table>
+        <thead>
+          <tr>
+            <th colspan="9">Gerenciar Autonomos</th>
+          </tr>
+          <tr>
+            <th>Id</th>
+            <th>Id_auto</th>
+            <th>Id_soli</th>
+            <th>Status</th>
+            <th>Latitude</th>
+            <th>Longi</th>
+            <th>Dia_Hora</th>
+            <th>Materiais</th>
+            <th class="tamanho1">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="corpochamados"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="8"><input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="2">
+              <label for="vehicle1"> Plastico</label><br>
+              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="1">
+              <label for="vehicle2"> Papel</label><br>
+              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="3">
+              <label for="vehicle1"> Vidro</label><br>
+              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="4">
+              <label for="vehicle2"> Metal</label><br>
+              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="6">
+              <label for="vehicle1"> Perigosos</label><br>
+              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="7">
+              <label for="vehicle2"> Hospitalares</label><br>
+              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="9">
+              <label for="vehicle1"> Radioativo</label><br>
+              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="8">
+              <label for="vehicle2"> Organico</label><br>
+              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="5">
+              <label for="vehicle1"> Madeira</label><br>
+              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="10">
+              <label for="vehicle3"> Geral</label><br><br>
+            </td>
+            <td><input type="button" value="Adicionar" onclick="addau()" /></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <br><br><br>
+    <div class="msg">
+      <p id="mensagem">Mensagens do Sistema</p>
+    </div>
+    <br><br>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <section>
+        <br><br><br><br>
+        <h2>Mais de EcoSystem</h2>
+        <br><br>
+        <ul class="contact">
+          <li><a href="#" class="fa fa-facebook-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-twitter-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-youtube-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-user"></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <br><br><br><br><br>
+    <hr>
+    <br>
+    <div id="copyright">
+      E-mail: ecosystem@sistem.org.br<br />
+      Telefone: (11) 3852-9345
+    </div>
+    <br>
+  </div>
+
+
+  <script src="chamados_automo_co_au.js"></script>
+</body>
+
+</html>

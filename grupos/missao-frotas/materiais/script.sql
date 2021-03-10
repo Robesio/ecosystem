@@ -1,8 +1,20 @@
-DROP DATABASE IF EXISTS ecosistema;
+DROP TABLE chamados_autonomos_has_materiais;
+DROP TABLE chamados_autonomos;
+DROP TABLE status_chamado;
+DROP TABLE logins;
+DROP TABLE tipos_logins;
+DROP TABLE usuarios;
 
-CREATE DATABASE ecosistema;
+DROP TABLE ecopontos_has_materiais;
+DROP TABLE ecopontos_has_veiculos;
+DROP TABLE ecopontos;
+DROP TABLE materiais;
+DROP TABLE pontos;
+DROP TABLE rotas;
+DROP TABLE veiculos;
+DROP TABLE porta_a_porta;
+DROP TABLE cooperativas;
 
-USE ecosistema;
 
 CREATE TABLE status_chamado (
   id INTEGER   NOT NULL  AUTO_INCREMENT,
