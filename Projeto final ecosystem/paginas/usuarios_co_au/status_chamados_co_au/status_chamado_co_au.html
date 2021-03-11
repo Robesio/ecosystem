@@ -20,7 +20,7 @@
       <a href="../../../index-comum.html">ínicio</a>
     </div>
     <div class="menu-content">
-      <input type="button" value="Sair" id="login">
+      <input type="button" value="Sair" id="login" onclick="sair()">
     </div>
   </div>
 
@@ -91,6 +91,11 @@
     <br>
   </div>
   <script src="status_chamado_co_au.js"></script>
+  <script>
+    function sair() {
+      window.location.href = "../../../login.html";
+    }
+  </script>
 </body>
 
 </html>
