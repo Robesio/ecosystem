@@ -17,9 +17,10 @@
       <img src="../../img/logo.png" alt="loooogu" id="logoImg">
     </div>
     <div class="menu-content">
-      <a href="../../../index-comum.html">ínicio</a>
+      <a href="../../../index-comum.html">Intrudução</a>
     </div>
     <div class="menu-content">
+      <b><a id="login" href="../ler_dados_usuarios/ler_dados_usuario.html">Perfil</a></b>
       <input type="button" value="Sair" id="login" onclick="sair()">
     </div>
   </div>
@@ -31,42 +32,32 @@
     <div class="menu">
       <b><a id="abacate" href="../ecopontos_co_au/ecopontos_co_au.html">EcoPontos</a></b>
       <b><a id="abacate" href="../ponto_co_au/ponto_co_au.html">Ponto</a></b>
-      <b><a id="abacate" href="../porta_a_porta_co_au/porta_porta_co_au.html">Porta</a></b>
-      <b><a id="abacate" href="../status_chamados_co_au/status_chamado_co_au.html">Status</a></b>
+      <b><a id="abacate" href="../rotas_co_au/rotas_co_au.html">Rotas</a></b>
     </div>
     <br><br>
     <hr>
     <br><br>
     <div class="menu">
-      <b><a id="abacate" href="../ler_dados_usuarios/ler_dados_usuario.html">Usuarios</a></b>
-      <b><a id="abacate" href="../rotas_co_au/rotas_co_au.html">Rotas</a></b>
-      <b><a id="abacate" href="../materiais_co_au/materiais_co-au.html">Materiais</a></b>
     </div>
-    <br><br><br><br>
-    <h2>Chamados Autonomos</h2>
+    <h2>Chamado</h2>
     <br><br>
     <div class="table1">
       <table>
         <thead>
           <tr>
-            <th colspan="9">Gerenciar Autonomos</th>
+            <th colspan="5">Chamados</th>
           </tr>
           <tr>
             <th>Id</th>
-            <th>Id_auto</th>
-            <th>Id_soli</th>
             <th>Status</th>
-            <th>Latitude</th>
-            <th>Longi</th>
             <th>Dia_Hora</th>
             <th>Materiais</th>
-            <th class="tamanho1">Ações</th>
           </tr>
         </thead>
         <tbody id="corpochamados"></tbody>
         <tfoot>
           <tr>
-            <td colspan="8"><input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="2">
+            <td colspan="4"><input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="2">
               <label for="vehicle1"> Plastico</label><br>
               <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="1">
               <label for="vehicle2"> Papel</label><br>
@@ -84,10 +75,10 @@
               <label for="vehicle2"> Organico</label><br>
               <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="5">
               <label for="vehicle1"> Madeira</label><br>
-              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="10">
+              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="11">
               <label for="vehicle3"> Geral</label><br><br>
+              <input type="button" value="Adicionar" onclick="addau()" />
             </td>
-            <td><input type="button" value="Adicionar" onclick="addau()" /></td>
           </tr>
         </tfoot>
       </table>

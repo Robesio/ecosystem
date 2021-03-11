@@ -8,7 +8,6 @@ function carregarChamados() {
     let iu = localStorage.getItem('id_user');
     let tu = localStorage.getItem('type_user');
     fetch(urlChamados + "route.chamados_autonomos.php?id=0&id_user=" + iu + "&type_user=" + tu)
-
         .then(function (resp) {
             if (!resp.ok)
                 throw new Error("Erro ao executar requisição: " + resp.status);
@@ -16,17 +15,19 @@ function carregarChamados() {
         })
         .then(function (data) {
             data.forEach((val) => {
-                let row = document.createElement("tr");
-                row.innerHTML = `<tr><td>${val.id}</td>`;
-                row.innerHTML += `<td>${val.usuario_autonomo_id}</td>`;
-                row.innerHTML += `<td>${val.usuario_solicitatnte_id}</td>`;
-                row.innerHTML += `<td>${val.status_cha}</td>`;
-                row.innerHTML += `<td>${val.lat}</td>`;
-                row.innerHTML += `<td>${val.longi}</td>`;
-                row.innerHTML += `<td>${val.dia_horario}</td>`;
-                row.innerHTML += `<td>${val.materiais}</td>`;
-                row.innerHTML += `<td style="padding:3px"><button onclick='edit(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='del(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`;
-                tableAu.appendChild(row);
+                if (val.id !== null) {
+                    let row = document.createElement("tr");
+                    row.innerHTML = `<tr><td>${val.id}</td>`;
+                    //row.innerHTML += `<td>${val.usuario_autonomo_id}</td>`;
+                    //row.innerHTML += `<td>${val.usuario_solicitatnte_id}</td>`;
+                    row.innerHTML += `<td>${val.status_cha}</td>`;
+                    //row.innerHTML += `<td>${val.lat}</td>`;
+                    //row.innerHTML += `<td>${val.longi}</td>`;
+                    row.innerHTML += `<td>${val.dia_horario}</td>`;
+                    row.innerHTML += `<td>${val.materiais}</td>`;
+                    //row.innerHTML += `<td style="padding:3px"><button onclick='edit(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='del(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`;
+                    tableAu.appendChild(row);
+                }
             });
         })
         .catch(function (error) {
@@ -40,12 +41,13 @@ function setCoords(position) {
     long = position.coords.longitude;
 }
 
+navigator.geolocation.getCurrentPosition(position => {
+    setCoords(position)
+});
+
 function addau() {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.chamados_autonomos.php";
     let materiais = document.getElementsByClassName("materiais");
-    navigator.geolocation.getCurrentPosition(position => {
-        setCoords(position)
-    });
     let selecionados = "";
     for (let i = 0; i < materiais.length; i++) {
         if (materiais[i].checked) {
@@ -79,13 +81,12 @@ function addau() {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
                 let resp = JSON.parse(this.responseText);
-                console.log(this.responseText);
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
                     msg.innerHTML = "Chamado Criado Com Sucesso.";
                 }
-                //setTimeout(() => { window.location.reload(); }, 3000);
+                setTimeout(() => { window.location.reload(); }, 3000);
             }
         });
         xhr.open("POST", url);

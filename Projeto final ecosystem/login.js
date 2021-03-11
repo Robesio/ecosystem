@@ -19,7 +19,7 @@ function acessar() {
                     if (resp[0].tipo === "3") {
                         destino += "index.html";
                     } else {
-                        destino += "index-comum.html";
+                        destino += "usuarios-co.html";
                     }
                     localStorage.setItem('type_user', resp[0].tipo);
                     localStorage.setItem('id_user', resp[0].id);
