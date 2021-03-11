@@ -20,8 +20,8 @@
       <a href="../../../index.html">ínicio</a>
     </div>
     <div class="menu-content">
-      <input type="button" value="Sair" id="login">
-  </div>
+      <input type="button" value="Sair" id="login" onclick="sair()">
+    </div>
   </div>
 
   <div class="conteudo">
@@ -48,12 +48,12 @@
       <table>
         <thead>
           <tr>
-            <th colspan="7">Cadastro de Cooperativas</th>
+            <th colspan="3">Cadastro de Cooperativas</th>
           </tr>
           <tr>
             <th>Id</th>
-            <th>Nome da Cooperativa</th>
-            <th>Cadastrar</th>
+            <th>Cooperativa</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody id="empresacoope"></tbody>
@@ -78,31 +78,37 @@
   </div>
   <div id="footer">
     <div class="container">
-        <section>
-            <br><br><br><br>
-                <h2>Mais de EcoSystem</h2>
-            <br><br>
-            <ul class="contact">
-                <li><a href="#" class="fa fa-facebook-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-twitter-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-youtube-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-user"></a>
-                </li>
-            </ul>
-        </section>
+      <section>
+        <br><br><br><br>
+        <h2>Mais de EcoSystem</h2>
+        <br><br>
+        <ul class="contact">
+          <li><a href="#" class="fa fa-facebook-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-twitter-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-youtube-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-user"></a>
+          </li>
+        </ul>
+      </section>
     </div>
-<br><br><br><br><br>
-<hr>
-<br>
-<div id="copyright">
-        E-mail: ecosystem@sistem.org.br<br/>
-        Telefone: (11) 3852-9345
-</div>
-<br>
-</div>
-
+    <br><br><br><br><br>
+    <hr>
+    <br>
+    <div id="copyright">
+      E-mail: ecosystem@sistem.org.br<br />
+      Telefone: (11) 3852-9345
+    </div>
+    <br>
+  </div>
+  <script src="empresa.js"></script>
+  <script>
+    function sair() {
+      window.location.href = "../../../login.html";
+    }
+  </script>
 </body>
+
 </html>

@@ -31,12 +31,21 @@ function addRota() {
     let url = "https://projetorrw.000webhostapp.com/src/controll/routes/route.rotas.php";
     let veiculos_id = document.querySelector("#veiculos_id");
     let nome = document.querySelector("#nome");
-    let dia_horario = document.querySelector("#dia_horario");
-    if (veiculos_id.value != "" && nome.value != "" && dia_horario.value != "") {
+    const date = new Date()
+    const ano = date.getYear() + 1900
+    const mes = date.getMonth() + 1
+    const dia = date.getDate()
+    const hora = date.getHours()
+    const minuto = date.getMinutes()
+    const segundo = date.getSeconds()
+    const dia_horario = `${ano}-${mes}-${dia} ${hora}:${minuto}:${segundo}`
+    //let dia_horario = document.querySelector("#dia_horario");
+    if (veiculos_id.value != "" && nome.value != "" && dia_horario != "") {
         let dados = new FormData();
         dados.append("veiculos_id", veiculos_id.value);
         dados.append("nome", nome.value);
-        dados.append("dia_horario", dia_horario.value);
+        //dados.append("dia_horario", dia_horario.value);
+        dados.append("dia_horario", dia_horario);
         dados.append("verbo", "POST");
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {

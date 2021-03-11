@@ -11,30 +11,25 @@
   <title>EcoSystem</title>
 </head>
 
-<body onload="readall()">
+<body>
   <div class="header">
     <div class="space menu-content">
       <img src="../../img/logo.png" alt="loooogu" id="logoImg">
     </div>
     <div class="menu-content">
-      <a href="../../../index-comum.html">ínicio</a>
+      <!--<a href="../../../index-comum.html">Intrudução</a>-->
     </div>
     <div class="menu-content">
-      <input type="button" value="Sair" id="login">
+      <input type="button" value="Sair" id="login" onclick="sair()">
+    </div>
   </div>
-</div>
 
   <div class="conteudo">
     <h1>EcoSystem</h1>
     <hr>
     <br><br>
     <div class="menu">
-      <b><a></a></b>
-        <b><a id="abacate" href="../usuarios-co.html">Voltar ao Menu</a></b>
-        <b><a></a></b>
     </div>
-    <br><br><br>
-    <br><br>
     <div class="table1">
       <table>
         <thead>
@@ -59,17 +54,17 @@
         <tfoot>
           <tr>
             <td><input type="text" id="nome" placeholder="nome" /></td>
-            <td><input type="number" id="celular" placeholder="celular" /></td>
+            <td><input type="tel" id="celular" placeholder="celular" /></td>
             <td><input type="text" id="rua" placeholder="rua" /></td>
             <td><input type="number" id="numero" placeholder="numero" /></td>
             <td><input type="text" id="bairro" placeholder="bairro" /></td>
             <td><input type="text" id="cidade" placeholder="cidade" /></td>
             <td><input type="text" id="uf" placeholder="uf" /></td>
             <td><input type="number" id="cpf" placeholder="cpf" /></td>
-            <td><input type="number" id="tipo" placeholder="1 ou 2" />
-            </td>
-            </td>
-            </td>
+            <td><select id="tipo">
+                <option value="1">1 - Comum</option>
+                <option value="2">2 - Autonomo</option>
+              </select></td>
             <td><input type="button" value="Adicionar" onclick="addusuarios()" /></td>
           </tr>
         </tfoot>
@@ -83,31 +78,37 @@
   </div>
   <div id="footer">
     <div class="container">
-        <section>
-            <br><br><br><br>
-                <h2>Mais de EcoSystem</h2>
-            <br><br>
-            <ul class="contact">
-                <li><a href="#" class="fa fa-facebook-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-twitter-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-youtube-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-user"></a>
-                </li>
-            </ul>
-        </section>
+      <section>
+        <br><br><br><br>
+        <h2>Mais de EcoSystem</h2>
+        <br><br>
+        <ul class="contact">
+          <li><a href="#" class="fa fa-facebook-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-twitter-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-youtube-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-user"></a>
+          </li>
+        </ul>
+      </section>
     </div>
-<br><br><br><br><br>
-<hr>
-<br>
-<div id="copyright">
-        E-mail: ecosystem@sistem.org.br<br/>
-        Telefone: (11) 3852-9345
-</div>
-<br>
-</div>
-
+    <br><br><br><br><br>
+    <hr>
+    <br>
+    <div id="copyright">
+      E-mail: ecosystem@sistem.org.br<br />
+      Telefone: (11) 3852-9345
+    </div>
+    <br>
+  </div>
+  <script>
+    function sair() {
+      window.location.href = "../../../login.html";
+    }
+  </script>
+  <script src="usuario_co_au_cadastra.js"></script>
 </body>
+
 </html>

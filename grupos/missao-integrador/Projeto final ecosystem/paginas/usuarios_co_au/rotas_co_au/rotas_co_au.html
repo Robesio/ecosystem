@@ -17,39 +17,39 @@
       <img src="../../img/logo.png" alt="loooogu" id="logoImg">
     </div>
     <div class="menu-content">
-      <a href="../../../index-comum.html">ínicio</a>
+      <a href="../../../index-comum.html">Intrudução</a>
     </div>
     <div class="menu-content">
-      <input type="button" value="Sair" id="login">
+      <b><a id="login" href="../ler_dados_usuarios/ler_dados_usuario.html">Perfil</a></b>
+      <input type="button" value="Sair" id="login" onclick="sair()">
+    </div>
   </div>
-</div>
 
-<div class="conteudo">
+  <div class="conteudo">
     <h1>EcoSystem</h1>
     <hr>
     <br><br>
     <div class="menu">
-        <b><a id="abacate" href="../ecopontos_co_au/ecopontos_co_au.html">EcoPontos</a></b>
-        <b><a id="abacate" href="../ponto_co_au/ponto_co_au.html">Ponto</a></b>
-        <b><a id="abacate" href="../porta_a_porta_co_au/porta_porta_co_au.html">Porta</a></b>
-        <b><a id="abacate" href="../status_chamados_co_au/status_chamado_co_au.html">Chamados</a></b>
+      <b><a id="abacate" href="../ecopontos_co_au/ecopontos_co_au.html">EcoPontos</a></b>
+      <b><a id="abacate" href="../ponto_co_au/ponto_co_au.html">Ponto</a></b>
+      <b><a id="abacate" href="../chamados_autonomos_co_au/chamados_autonomo_co_au.html">Novo_Chamado</a></b>
+
     </div>
     <br><br>
     <hr>
     <br><br>
     <div class="menu">
-        <b><a id="abacate" href="../chamados_autonomos_co_au/chamados_autonomo_co_au.html">Autonomo</a></b>
-        <b><a id="abacate" href="../usuario_co_au_cadastrar/usuario_co_au_cadastra.html">Usuarios</a></b>
-        <b><a id="abacate" href="../materiais_co_au/materiais_co-au.html">Materiais</a></b>
+      <!--<b><a id="abacate" href="../porta_a_porta_co_au/porta_porta_co_au.html">Porta</a></b>
+      <b><a id="abacate" href="../status_chamados_co_au/status_chamado_co_au.html">Chamados</a></b>
+      <b><a id="abacate" href="../materiais_co_au/materiais_co-au.html">Materiais</a></b>-->
     </div>
-    <br><br><br><br>
     <h2>Rotas</h2>
     <br><br>
     <div class="table1">
       <table>
         <thead>
           <tr>
-            <th colspan="4">Gerenciar Rotas</th>
+            <th colspan="4">Rotas</th>
           </tr>
           <tr>
             <th>Id</th>
@@ -61,48 +61,44 @@
         <tbody id="corporotas">
         </tbody>
         <tfoot>
-          <tr>
-            <td><input type="number" id="veiculos_id" placeholder="Id_veiculo" /></td>
-            <td><input type="text" id="nome" placeholder="Nome" /></td>
-            <td><input type="text" id="dia_horario" placeholder="Data H ora" /></td>
-            <td><input type="button" value="Adicionar" onclick="addRota()" /></td>
-          </tr>
         </tfoot>
       </table>
     </div>
-    <br><br>
-    <div class="msg">
-      <p id="mensagem">Mensagens do Sistema</p>
-    </div>
-    <br><br><br>
+    <br><br><br><br><br><br>
   </div>
   <div id="footer">
     <div class="container">
-        <section>
-            <br><br><br><br>
-                <h2>Mais de EcoSystem</h2>
-            <br><br>
-            <ul class="contact">
-                <li><a href="#" class="fa fa-facebook-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-twitter-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-youtube-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-user"></a>
-                </li>
-            </ul>
-        </section>
+      <section>
+        <br><br><br><br>
+        <h2>Mais de EcoSystem</h2>
+        <br><br>
+        <ul class="contact">
+          <li><a href="#" class="fa fa-facebook-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-twitter-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-youtube-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-user"></a>
+          </li>
+        </ul>
+      </section>
     </div>
-<br><br><br><br><br>
-<hr>
-<br>
-<div id="copyright">
-        E-mail: ecosystem@sistem.org.br<br/>
-        Telefone: (11) 3852-9345
-</div>
-<br>
-</div>
-
+    <br><br><br><br><br>
+    <hr>
+    <br>
+    <div id="copyright">
+      E-mail: ecosystem@sistem.org.br<br />
+      Telefone: (11) 3852-9345
+    </div>
+    <br>
+  </div>
+  <script src="rotas_co_au.js"></script>
+  <script>
+    function sair() {
+      window.location.href = "../../../login.html";
+    }
+  </script>
 </body>
+
 </html>

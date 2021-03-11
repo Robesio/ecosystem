@@ -38,7 +38,7 @@ function cadastro() {
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
-                    msg.innerHTML = "Empresa Cadastrada Com Sucesso.";
+                    msg.innerHTML = "Cooperativa Cadastrada Com Sucesso.";
                 }
                 setTimeout(() => { window.location.reload(); }, 3000);
             }
@@ -102,4 +102,4 @@ function delCooperativas(v) {
         xhr.open("POST", url);
         xhr.send(dados);
     }
-}    
+}

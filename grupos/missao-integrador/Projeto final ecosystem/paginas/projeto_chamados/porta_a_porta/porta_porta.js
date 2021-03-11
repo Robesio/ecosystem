@@ -86,12 +86,13 @@ function putPorta(p) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
                 let resp = JSON.parse(this.responseText);
+                console.log(this.responseText);
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
                     msg.innerHTML = "Dados Alterado Com Sucesso.";
                 }
-                setTimeout(() => { window.location.reload(); }, 3000);
+                //setTimeout(() => { window.location.reload(); }, 3000);
             }
         });
         xhr.open("POST", url);

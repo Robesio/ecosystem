@@ -5,6 +5,7 @@ const urlUsuario = "https://projetorrw.000webhostapp.com/src/controll/routes/rou
 
 function carregarUsuario() {
     fetch(urlUsuario + "route.usuarios.php?id=0")
+    fetch(urlUsuario + "route.usuarios.php?id=" + localStorage.getItem('id_user'))
         .then(function (resp) {
             if (!resp.ok)
                 throw new Error("Erro ao executar requisição: " + resp.status)
@@ -77,7 +78,6 @@ function addusuarios() {
 }
 
 function editusuarios(u) {
-    u.parentNode.parentNode.cells[0].setAttribute("contentEditable", "true");
     u.parentNode.parentNode.cells[1].setAttribute("contentEditable", "true");
     u.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     u.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
@@ -86,7 +86,7 @@ function editusuarios(u) {
     u.parentNode.parentNode.cells[6].setAttribute("contentEditable", "true");
     u.parentNode.parentNode.cells[7].setAttribute("contentEditable", "true");
     u.parentNode.parentNode.cells[8].setAttribute("contentEditable", "true");
-    u.parentNode.parentNode.cells[9].innerHTML = "<button onclick='putusuarios(this)'>Enviar</button>";
+    u.parentNode.parentNode.cells[10].innerHTML = "<button onclick='putusuarios(this)'>Enviar</button>";
 }
 
 function putusuarios(e) {
@@ -113,17 +113,17 @@ function putusuarios(e) {
     dados.append("cpf", cpf);
     dados.append("tipo", tipo);
     dados.append("verbo", "PUT");
+    dados.append("type_user", localStorage.getItem('type_user'));
     if (window.confirm("Confirma Alteração dos dados?")) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
                 let resp = JSON.parse(this.responseText);
-                console.log(this.responseText);
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
-                    msg.innerHTML = "Dados do Ecoponto Alterada Com Sucesso.";
+                    msg.innerHTML = "Dados do Usuário Alterada Com Sucesso.";
                 }
-                //setTimeout(() => { window.location.reload(); }, 3000);
+                setTimeout(() => { window.location.reload(); }, 3000);
             }
         });
         xhr.open("POST", url);
@@ -141,13 +141,12 @@ function delusuarios(v) {
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {
                 let resp = JSON.parse(this.responseText);
-                console.log(this.responseText);
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro
                 } else {
                     msg.innerHTML = "Usuario excluido Com Sucesso."
                 }
-                //setTimeout(() => { window.location.reload(); }, 3000)
+                setTimeout(() => { window.location.reload(); }, 3000)
             }
         });
         xhr.open("POST", url)

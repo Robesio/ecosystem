@@ -19,7 +19,7 @@
             <a href="/index.html">ínicio</a>
         </div>
         <div class="menu-content">
-            <input type="button" value="Sair" id="login">
+            <input type="button" value="Sair" id="login" onclick="sair()">
         </div>
     </div>
 
@@ -30,14 +30,18 @@
         <h2>Área de Chamados</h2>
         <br><br>
         <div class="menu">
-            <b><a id="abacate" href="chamados_autonomos/chamados_autonomo.html">Autonomos</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <b><a id="abacate" href="materiais/materiais.html">Materiais</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <b><a id="abacate" href="porta_a_porta/porta_porta.html">Porta</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <b><a id="abacate" href="status_chamados/status_chamado.html">Status</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b><a id="abacate"
+                    href="chamados_autonomos/chamados_autonomo.html">Chamados</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b><a id="abacate"
+                    href="materiais/materiais.html">Materiais</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b><a id="abacate"
+                    href="porta_a_porta/porta_porta.html">Porta</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b><a id="abacate"
+                    href="status_chamados/status_chamado.html">Status</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </div>
         <br><br>
 
-        <img src="../img/chamado.png" id="img-rotas"/>
+        <img src="../img/chamado.png" id="img-rotas" />
         <br><br><br><br><br>
     </div>
 
@@ -45,7 +49,7 @@
         <div class="container">
             <section>
                 <br><br><br><br>
-                    <h2>Mais de EcoSystem</h2>
+                <h2>Mais de EcoSystem</h2>
                 <br><br>
                 <ul class="contact">
                     <li><a href="#" class="fa fa-facebook-square"></a>
@@ -59,14 +63,20 @@
                 </ul>
             </section>
         </div>
-    <br><br><br><br><br>
-    <hr>
-    <br>
-    <div id="copyright">
-            E-mail: ecosystem@sistem.org.br<br/>
+        <br><br><br><br><br>
+        <hr>
+        <br>
+        <div id="copyright">
+            E-mail: ecosystem@sistem.org.br<br />
             Telefone: (11) 3852-9345
+        </div>
+        <br>
     </div>
-    <br>
-    </div>
+    <script>
+        function sair() {
+            window.location.href = "../../login.html";
+        }
+    </script>
 </body>
+
 </html>

@@ -13,13 +13,11 @@ function carregaEcoponto() {
         .then(function (data) {
             data.forEach((val) => {
                 let row = document.createElement("tr");
-                //row.innerHTML = `<tr><td>${val.id}</td>`;
-                //row.innerHTML += `<td>${val.cooperativas_id}</td>`;
                 row.innerHTML += `<td>${val.nome}</td>`;
                 row.innerHTML += `<td>${val.descricao}</td>`;
                 row.innerHTML += `<td>${val.lat}</td>`;
                 row.innerHTML += `<td>${val.longi}</td>`;
-                //row.innerHTML += `<td style="padding:3px"><button onclick='editEcoponto(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delEcoponto(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`;
+                row.innerHTML += `<td>${val.materiais}</td>`;
                 tableEcopontos.appendChild(row);
             });
         })

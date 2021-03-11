@@ -33,7 +33,6 @@ function addponto() {
     let lat = document.querySelector("#lat");
     let longi = document.querySelector("#longi");
     if (rotas_id.value != "" && lat.value != "" && longi.value != "") {
-
         let rotas_id = document.getElementById("rotas_id");
         let lat = document.getElementById("lat");
         let longi = document.getElementById("longi");

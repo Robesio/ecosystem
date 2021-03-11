@@ -19,6 +19,7 @@ function carregaEcoponto() {
                 row.innerHTML += `<td>${val.descricao}</td>`;
                 row.innerHTML += `<td>${val.lat}</td>`;
                 row.innerHTML += `<td>${val.longi}</td>`;
+                row.innerHTML += `<td>${val.materiais}</td>`;
                 row.innerHTML += `<td style="padding:3px"><button onclick='editEcoponto(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delEcoponto(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`;
                 tableEcopontos.appendChild(row);
             });
@@ -35,13 +36,24 @@ function addEcoponto() {
     let descricao = document.querySelector("#descricao");
     let lat = document.querySelector("#lat");
     let longi = document.querySelector("#longi");
-    if (cooperativas_id.value != "" && nome.value != "" && descricao.value != "" && lat.value != "" && longi.value != "") {
+    let materiais = document.getElementsByClassName("materiais");
+
+    let selecionados = "";  //
+    for (let i = 0; i < materiais.length; i++) {
+        if (materiais[i].checked) {
+            selecionados += materiais[i].value + ";";
+        }
+    }
+    selecionados = selecionados.substring(0, selecionados.length - 1);
+
+    if (selecionados != "" && cooperativas_id.value != "" && nome.value != "" && descricao.value != "" && lat.value != "" && longi.value != "") {
         let dados = new FormData();
         dados.append("cooperativas_id", cooperativas_id.value);
         dados.append("nome", nome.value);
         dados.append("descricao", descricao.value);
         dados.append("lat", lat.value);
         dados.append("longi", longi.value);
+        dados.append("materiais", selecionados);
         dados.append("verbo", "POST");
         xhr.addEventListener("readystatechange", function () {
             if (this.readyState === this.DONE) {

@@ -20,8 +20,8 @@
       <a href="../../../index.html">ínicio</a>
     </div>
     <div class="menu-content">
-      <input type="button" value="Sair" id="login">
-  </div>
+      <input type="button" value="Sair" id="login" onclick="sair()">
+    </div>
   </div>
 
   <div class="conteudo">
@@ -29,7 +29,8 @@
     <hr>
     <br><br>
     <div class="menu">
-      <b><a id="abacate" href="../Cooperativa/rotaEmp.html">Cooperativa</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <b><a id="abacate"
+          href="../Cooperativa/rotaEmp.html">Cooperativa</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <b><a id="abacate" href="../ponto/ponto.html">Pontos</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <b><a id="abacate" href="../rotas/rotas.html">Rotas</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
@@ -48,7 +49,7 @@
       <table>
         <thead>
           <tr>
-            <th colspan="7">Gerenciar Ecopontos</th>
+            <th colspan="8">Gerenciar Ecopontos</th>
           </tr>
           <tr>
             <th>Id</th>
@@ -57,6 +58,7 @@
             <th>Descrição</th>
             <th>Lat</th>
             <th>Longi</th>
+            <th>Materiais</th>
             <th class="tamanho1">Ações</th>
           </tr>
         </thead>
@@ -69,6 +71,27 @@
             <td><input type="text" placeholder="Descrição" id="descricao" /> </td>
             <td><input type="number" placeholder="Lat" id="lat" /></td>
             <td><input type="number" placeholder="Longi" id="longi" /></td>
+            <td colspan="1"><input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="2">
+              <label for="vehicle1"> Plastico</label><br>
+              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="1">
+              <label for="vehicle2"> Papel</label><br>
+              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="3">
+              <label for="vehicle1"> Vidro</label><br>
+              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="4">
+              <label for="vehicle2"> Metal</label><br>
+              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="6">
+              <label for="vehicle1"> Perigosos</label><br>
+              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="7">
+              <label for="vehicle2"> Hospitalares</label><br>
+              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="9">
+              <label for="vehicle1"> Radioativo</label><br>
+              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="8">
+              <label for="vehicle2"> Organico</label><br>
+              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="5">
+              <label for="vehicle1"> Madeira</label><br>
+              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="10">
+              <label for="vehicle3"> Geral</label><br><br>
+            </td>
             <td><input type="button" value="Adicionar" onclick="addEcoponto()" /></td>
           </tr>
         </tfoot>
@@ -82,31 +105,37 @@
   </div>
   <div id="footer">
     <div class="container">
-        <section>
-            <br><br><br><br>
-                <h2>Mais de EcoSystem</h2>
-            <br><br>
-            <ul class="contact">
-                <li><a href="#" class="fa fa-facebook-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-twitter-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-youtube-square"></a>
-                </li>
-                <li><a href="#" class="fa fa-user"></a>
-                </li>
-            </ul>
-        </section>
+      <section>
+        <br><br><br><br>
+        <h2>Mais de EcoSystem</h2>
+        <br><br>
+        <ul class="contact">
+          <li><a href="#" class="fa fa-facebook-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-twitter-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-youtube-square"></a>
+          </li>
+          <li><a href="#" class="fa fa-user"></a>
+          </li>
+        </ul>
+      </section>
     </div>
-<br><br><br><br><br>
-<hr>
-<br>
-<div id="copyright">
-        E-mail: ecosystem@sistem.org.br<br/>
-        Telefone: (11) 3852-9345
-</div>
-<br>
-</div>
-
+    <br><br><br><br><br>
+    <hr>
+    <br>
+    <div id="copyright">
+      E-mail: ecosystem@sistem.org.br<br />
+      Telefone: (11) 3852-9345
+    </div>
+    <br>
+  </div>
+  <script src="ecopontos.js"></script>
+  <script>
+    function sair() {
+      window.location.href = "../../../login.html";
+    }
+  </script>
 </body>
+
 </html>

@@ -19,11 +19,11 @@ function acessar() {
                     if (resp[0].tipo === "3") {
                         destino += "index.html";
                     } else {
-                        destino += "index-comum.html";
+                        destino += "usuarios-co.html";
                     }
                     localStorage.setItem('type_user', resp[0].tipo);
                     localStorage.setItem('id_user', resp[0].id);
-                    window.location.href = destino + "?document=" + resp[0].nome + "&id=" + resp[0].id;
+                    window.location.href = destino + "?id=" + resp[0].id + "&document=" + resp[0].nome + "&type_user=" + resp[0].tipo;
                 }
             }
         });

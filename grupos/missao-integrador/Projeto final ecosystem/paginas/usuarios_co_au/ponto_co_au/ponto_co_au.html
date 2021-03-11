@@ -17,10 +17,11 @@
       <img src="../../img/logo.png" alt="loooogu" id="logoImg">
     </div>
     <div class="menu-content">
-      <a href="../../../index-comum.html">ínicio</a>
+      <a href="../../../index-comum.html">Intrudução</a>
     </div>
     <div class="menu-content">
-      <input type="button" value="Sair" id="login">
+      <b><a id="login" href="../ler_dados_usuarios/ler_dados_usuario.html">Perfil</a></b>
+      <input type="button" value="Sair" id="login" onclick="sair()">
     </div>
   </div>
 
@@ -31,16 +32,13 @@
     <div class="menu">
       <b><a id="abacate" href="../ecopontos_co_au/ecopontos_co_au.html">EcoPontos</a></b>
       <b><a id="abacate" href="../rotas_co_au/rotas_co_au.html">Rotas</a></b>
-      <b><a id="abacate" href="../porta_a_porta_co_au/porta_porta_co_au.html">Porta</a></b>
-      <b><a id="abacate" href="../status_chamados_co_au/status_chamado_co_au.html">Chamados</a></b>
+      <b><a id="abacate" href="../chamados_autonomos_co_au/chamados_autonomo_co_au.html">Novo_Chamado</a></b>
     </div>
     <br><br>
     <hr>
     <br><br>
     <div class="menu">
-      <b><a id="abacate" href="../chamados_autonomos_co_au/chamados_autonomo_co_au.html">Autonomo</a></b>
-      <b><a id="abacate" href="../usuario_co_au_cadastrar/usuario_co_au_cadastra.html">Usuario</a></b>
-      <b><a id="abacate" href="../materiais_co_au/materiais_co-au.html">Materiais</a></b>
+
     </div>
     <br><br><br><br>
     <h2>Pontos de Coletas</h2>
@@ -63,9 +61,6 @@
       </table>
     </div>
     <br><br>
-    <div class="msg">
-      <p id="mensagem">Mensagens do Sistema</p>
-    </div>
     <br><br><br>
   </div>
   <div id="footer">
@@ -96,6 +91,11 @@
     <br>
   </div>
   <script src="ponto_co_au.js"></script>
+  <script>
+    function sair() {
+      window.location.href = "../../../login.html";
+    }
+  </script>
 </body>
 
 </html>

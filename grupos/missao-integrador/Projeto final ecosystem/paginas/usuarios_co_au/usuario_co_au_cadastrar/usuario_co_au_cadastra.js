@@ -32,6 +32,7 @@ function addusuarios() {
                 if (resp.hasOwnProperty("erro")) {
                     msg.innerHTML = resp.erro;
                 } else {
+                    alert("Sua SENHA de acesso é os três ultimos digitos do seu CPF");
                     msg.innerHTML = "Usuário Criado Com Sucesso.";
                 }
                 setTimeout(() => { window.location.reload(); }, 3000);
