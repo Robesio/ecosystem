@@ -12,12 +12,14 @@ function carregarPorta() {
         })
         .then(function (data) {
             data.forEach((val) => {
+                let url = "https://www.google.com.br/maps/dir//" + val.lat + "," + val.longi;
                 let row = document.createElement("tr");
                 row.innerHTML = `<tr><td>${val.id}</td>`;
                 row.innerHTML += `<td>${val.cooperativas_id}</td>`;
                 row.innerHTML += `<td>${val.descricao}</td>`;
                 row.innerHTML += `<td>${val.lat}</td>`;
                 row.innerHTML += `<td>${val.longi}</td>`;
+                row.innerHTML += `<td><a href=${url}>Ver no map</a></td>`;
                 row.innerHTML += `<td style="padding:3px"><button onclick='editPorta(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delPorta(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`;
                 tablePorta.appendChild(row);
             });
@@ -65,7 +67,7 @@ function editPorta(p) {
     p.parentNode.parentNode.cells[2].setAttribute("contentEditable", "true");
     p.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
     p.parentNode.parentNode.cells[4].setAttribute("contentEditable", "true");
-    p.parentNode.parentNode.cells[5].innerHTML = "<button onclick='putPorta(this)'>Enviar</button>";
+    p.parentNode.parentNode.cells[6].innerHTML = "<button onclick='putPorta(this)'>Enviar</button>";
 }
 
 function putPorta(p) {

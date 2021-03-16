@@ -12,6 +12,7 @@ function carregaEcoponto() {
         })
         .then(function (data) {
             data.forEach((val) => {
+                let url = "https://www.google.com.br/maps/dir//" + val.lat + "," + val.longi;
                 let row = document.createElement("tr");
                 row.innerHTML = `<tr><td>${val.id}</td>`;
                 row.innerHTML += `<td>${val.cooperativas_id}</td>`;
@@ -19,6 +20,7 @@ function carregaEcoponto() {
                 row.innerHTML += `<td>${val.descricao}</td>`;
                 row.innerHTML += `<td>${val.lat}</td>`;
                 row.innerHTML += `<td>${val.longi}</td>`;
+                row.innerHTML += `<td><a href="${url}" target="_blank">Ver no map</a></td>`;
                 row.innerHTML += `<td>${val.materiais}</td>`;
                 row.innerHTML += `<td style="padding:3px"><button onclick='editEcoponto(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delEcoponto(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`;
                 tableEcopontos.appendChild(row);
@@ -38,7 +40,7 @@ function addEcoponto() {
     let longi = document.querySelector("#longi");
     let materiais = document.getElementsByClassName("materiais");
 
-    let selecionados = "";  //
+    let selecionados = "";
     for (let i = 0; i < materiais.length; i++) {
         if (materiais[i].checked) {
             selecionados += materiais[i].value + ";";
@@ -81,7 +83,7 @@ function editEcoponto(e) {
     e.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
     e.parentNode.parentNode.cells[4].setAttribute("contentEditable", "true");
     e.parentNode.parentNode.cells[5].setAttribute("contentEditable", "true");
-    e.parentNode.parentNode.cells[6].innerHTML = "<button onclick='putEcoponto(this)'>Enviar</button>";
+    e.parentNode.parentNode.cells[8].innerHTML = "<button onclick='putEcoponto(this)'>Enviar</button>";
 }
 
 function putEcoponto(e) {

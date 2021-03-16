@@ -15,7 +15,7 @@ function carregarRotas() {
             data.forEach((val) => {
                 let r = document.createElement("tr");
                 r.innerHTML = `<tr><td>${val.id} </td>`;
-                r.innerHTML += `<td>${val.veiculos_id} </td>`;
+                //r.innerHTML += `<td>${val.veiculos_id} </td>`;
                 r.innerHTML += `<td>${val.nome} </td>`;
                 r.innerHTML += `<td>${val.dia_horario} </td>`;
                 tableRotas.appendChild(r);

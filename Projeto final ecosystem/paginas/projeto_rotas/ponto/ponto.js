@@ -13,11 +13,13 @@ function carregarPonto() {
         })
         .then(function (data) {
             data.forEach((val) => {
+                let url = "https://www.google.com.br/maps/dir//" + val.lat + "," + val.longi;
                 let r = document.createElement("tr");
                 r.innerHTML = `<tr><td>${val.id} </td>`;
                 r.innerHTML += `<td>${val.rotas_id} </td>`;
                 r.innerHTML += `<td>${val.lat} </td>`;
                 r.innerHTML += `<td>${val.longi} </td>`;
+                r.innerHTML += `<td><a href="${url}" target="_blank">Ver no map</a></td>`;
                 r.innerHTML += `<td style="padding:3px"><button onclick='editponto(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='delponto(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`;
                 tablePonto.appendChild(r);
             })

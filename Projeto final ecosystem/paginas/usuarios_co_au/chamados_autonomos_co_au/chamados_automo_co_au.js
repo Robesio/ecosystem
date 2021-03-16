@@ -7,7 +7,7 @@ var lati, long;
 function carregarChamados() {
     let iu = localStorage.getItem('id_user');
     let tu = localStorage.getItem('type_user');
-    fetch(urlChamados + "route.chamados_autonomos.php?id=0&id_user=" + iu + "&type_user=" + tu)
+    fetch(urlChamados + "route.chamados_autonomos.php?id=0&id_user=" + iu + "&type_user=1")
         .then(function (resp) {
             if (!resp.ok)
                 throw new Error("Erro ao executar requisição: " + resp.status);
@@ -18,14 +18,15 @@ function carregarChamados() {
                 if (val.id !== null) {
                     let row = document.createElement("tr");
                     row.innerHTML = `<tr><td>${val.id}</td>`;
-                    //row.innerHTML += `<td>${val.usuario_autonomo_id}</td>`;
-                    //row.innerHTML += `<td>${val.usuario_solicitatnte_id}</td>`;
-                    row.innerHTML += `<td>${val.status_cha}</td>`;
-                    //row.innerHTML += `<td>${val.lat}</td>`;
-                    //row.innerHTML += `<td>${val.longi}</td>`;
+                    let status = "Aberto";
+                    if (val.status_cha == "3") {
+                        status = "Fechado";
+                    } else if (val.status_cha == "4") {
+                        status = "Em Andamento";
+                    }
+                    row.innerHTML += `<td>${status}</td>`;
                     row.innerHTML += `<td>${val.dia_horario}</td>`;
                     row.innerHTML += `<td>${val.materiais}</td>`;
-                    //row.innerHTML += `<td style="padding:3px"><button onclick='edit(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='del(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`;
                     tableAu.appendChild(row);
                 }
             });

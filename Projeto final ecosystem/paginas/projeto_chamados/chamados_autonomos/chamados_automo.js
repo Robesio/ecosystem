@@ -16,6 +16,7 @@ function carregaAU() {
         })
         .then(function (data) {
             data.forEach((val) => {
+                let url = "https://www.google.com.br/maps/dir//" + val.lat + "," + val.longi;
                 let row = document.createElement("tr");
                 row.innerHTML = `<tr><td>${val.id}</td>`;
                 row.innerHTML += `<td>${val.usuario_autonomo_id}</td>`;
@@ -23,6 +24,7 @@ function carregaAU() {
                 row.innerHTML += `<td>${val.status_cha}</td>`;
                 row.innerHTML += `<td>${val.lat}</td>`;
                 row.innerHTML += `<td>${val.longi}</td>`;
+                row.innerHTML += `<td><a href=${url}>Ver no map</a></td>`;
                 row.innerHTML += `<td>${val.dia_horario}</td>`;
                 row.innerHTML += `<td>${val.materiais}</td>`;
                 row.innerHTML += `<td style="padding:3px"><button onclick='edit(this)'><i class="fa fa-pencil" aria-hidden="true"></i></button><button onclick='del(this)'><i class="fa fa-trash-o" aria-hidden="true"></i></button></td></tr>`;
@@ -106,9 +108,9 @@ function edit(v) {
     v.parentNode.parentNode.cells[3].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[4].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[5].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[6].setAttribute("contentEditable", "true");
     v.parentNode.parentNode.cells[7].setAttribute("contentEditable", "true");
-    v.parentNode.parentNode.cells[8].innerHTML = "<button onclick='put(this)'>Enviar</button>";
+    v.parentNode.parentNode.cells[8].setAttribute("contentEditable", "true");
+    v.parentNode.parentNode.cells[9].innerHTML = "<button onclick='put(this)'>Enviar</button>";
 }
 
 function put(e) {
@@ -119,7 +121,7 @@ function put(e) {
     let status = e.parentNode.parentNode.cells[3].innerHTML;
     let lat = e.parentNode.parentNode.cells[4].innerHTML;
     let longi = e.parentNode.parentNode.cells[5].innerHTML;
-    let dia_hora = e.parentNode.parentNode.cells[6].innerHTML;
+    let dia_hora = e.parentNode.parentNode.cells[7].innerHTML;
     let dados = new FormData();
     dados.append("id", id)
     dados.append("autonomo_id", autonomo_id);

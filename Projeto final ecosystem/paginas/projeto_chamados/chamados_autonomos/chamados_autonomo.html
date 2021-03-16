@@ -50,7 +50,7 @@
       <table>
         <thead>
           <tr>
-            <th colspan="9">Gerenciar Autonomos</th>
+            <th colspan="10">Gerenciar Autonomos</th>
           </tr>
           <tr>
             <th>Id</th>
@@ -58,8 +58,9 @@
             <th>Id_soli</th>
             <th>Status</th>
             <th>Latitude</th>
-            <th>Longi</th>
-            <th>Dia_Hora</th>
+            <th>Longitude</th>
+            <th>Localização</th>
+            <th>Dia e horario</th>
             <th>Materiais</th>
             <th class="tamanho1">Ações</th>
           </tr>
@@ -67,26 +68,38 @@
         <tbody id="corpoau"></tbody>
         <tfoot>
           <tr>
-            <td colspan="8"><input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="2">
-              <label for="vehicle1"> Plastico</label><br>
-              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="1">
-              <label for="vehicle2"> Papel</label><br>
-              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="3">
-              <label for="vehicle1"> Vidro</label><br>
-              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="4">
-              <label for="vehicle2"> Metal</label><br>
-              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="6">
-              <label for="vehicle1"> Perigosos</label><br>
-              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="7">
-              <label for="vehicle2"> Hospitalares</label><br>
-              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="9">
-              <label for="vehicle1"> Radioativo</label><br>
-              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="8">
-              <label for="vehicle2"> Organico</label><br>
-              <input type="checkbox" class="materiais" id="vehicle1" name="vehicle1" value="5">
-              <label for="vehicle1"> Madeira</label><br>
-              <input type="checkbox" class="materiais" id="vehicle2" name="vehicle2" value="10">
-              <label for="vehicle3"> Geral</label><br><br>
+            <td colspan="4">
+              <input type="checkbox" class="materiais1" id="vehicle1" name="vehicle1" value="2">
+              <label for="vehicle1" class="materiais1a"> Plastico</label><br>
+
+              <input type="checkbox" class="materiais1" id="vehicle2" name="vehicle2" value="1">
+              <label for="vehicle2" class="materiais1b"> Papel</label><br>
+
+              <input type="checkbox" class="materiais1" id="vehicle1" name="vehicle1" value="3">
+              <label for="vehicle1" class="materiais1c"> Vidro</label><br>
+
+              <input type="checkbox" class="materiais1" id="vehicle2" name="vehicle2" value="4">
+              <label for="vehicle2" class="materiais1d"> Metal</label><br>
+
+              <input type="checkbox" class="materiais1" id="vehicle1" name="vehicle1" value="6">
+              <label for="vehicle1" class="materiais1e"> Perigosos</label><br>
+
+            </td>
+            <td colspan="5">
+              <input type="checkbox" class="materiais1" id="vehicle2" name="vehicle2" value="7">
+              <label for="vehicle2" class="materiais2a"> Hospitalares</label><br>
+
+              <input type="checkbox" class="materiais1" id="vehicle1" name="vehicle1" value="9">
+              <label for="vehicle1" class="materiais2b"> Radioativo</label><br>
+
+              <input type="checkbox" class="materiais1" id="vehicle2" name="vehicle2" value="8">
+              <label for="vehicle2" class="materiais2c"> Organico</label><br>
+
+              <input type="checkbox" class="materiais1" id="vehicle1" name="vehicle1" value="5">
+              <label for="vehicle1" class="materiais2d"> Madeira</label><br>
+
+              <input type="checkbox" class="materiais1" id="vehicle2" name="vehicle2" value="10">
+              <label for="vehicle3" class="materiais2e"> Geral</label><br><br>
             </td>
             <td><input type="button" value="Adicionar" onclick="addau()" /></td>
           </tr>

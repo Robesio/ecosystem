@@ -148,6 +148,72 @@ button {
     border-radius: 8px;
     justify-content: space-between;
 }
+.materiais1a{
+    margin:0 0 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+ }
+ .materiais1b{
+    margin:0 20px 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+ }
+ .materiais1c{
+    margin:0 20px 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+ }
+ .materiais1d{
+    margin:0 20px 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+ }
+ .materiais1e{
+    margin:0 -10px 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+ }
+ .materiais1e{
+    margin:0 -10px 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+ }
+ .materiais1f{
+    margin:0 -32px 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+ }
+ .materiais1g{
+    margin:0 -18px 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+ }
+ .materiais1h{
+    margin:0 -5px 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+ }
+ .materiais1i{
+    margin:0 0 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+ }
+ .materiais1j{
+    margin:0 24px 0 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+ }
 #chamados{
     display: flex;
     padding: 15px;
